@@ -1,6 +1,7 @@
 import 'package:counter_bloc/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -9,38 +10,22 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MinhasCores.cinza,
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
+      body: Stack(
         children: [
-          Stack(
-            children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: MediaQuery.of(context).size.height,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Colors.red, // cor esquerda
-
-                        Colors.green, // cor do meio
-
-                        Colors.blue, // cor direita
-                      ],
-                      stops: [
-                        0.0, // início da cor esquerda
-
-                        0.5, // início da cor do meio
-
-                        1.0, // início da cor direita
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          // Background image
+          Positioned.fill(
+            child: SvgPicture.asset(
+              'assets/background.svg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          // Centered logo
+          Center(
+            child: SvgPicture.asset(
+              'assets/logo1.png',
+              width: 150, // Ajuste o tamanho conforme necessário
+              height: 150, // Ajuste o tamanho conforme necessário
+            ),
           ),
         ],
       ),
