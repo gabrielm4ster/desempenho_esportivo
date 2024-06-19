@@ -1,4 +1,5 @@
-
+import 'package:counter_bloc/pages/login_page.dart';
+import 'package:counter_bloc/pages/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'splash_screen.dart';
@@ -10,14 +11,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home:SplashScreen(),
+      home: LoginPage(),
     );
-    
   }
 }

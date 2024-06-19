@@ -17,9 +17,6 @@ class SplashScreen extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          // Centered logo
-          // Column(
-          // children: [
           Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
