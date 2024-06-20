@@ -1,4 +1,4 @@
-import 'package:counter_bloc/_comum/minhas_cores.dart';
+import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,8 +1,5 @@
-import 'package:counter_bloc/pages/login_page.dart';
-import 'package:counter_bloc/pages/welcome_screen.dart';
+import 'package:desempenho_esportivo/pages/cadastro_page.dart';
 import 'package:flutter/material.dart';
-
-import 'splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: LoginPage(),
+      home: CadastroPage(),
     );
   }
 }
