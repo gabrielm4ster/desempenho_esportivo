@@ -1,4 +1,5 @@
 import 'package:desempenho_esportivo/pages/cadastro_page.dart';
+import 'package:desempenho_esportivo/pages/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: CadastroPage(),
+      home: WelcomeScreen(),
     );
   }
 }

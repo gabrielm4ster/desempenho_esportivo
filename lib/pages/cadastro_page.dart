@@ -65,9 +65,20 @@ class _CadastroPageState extends State<CadastroPage> {
                         'já tem uma conta?',
                         style: TextStyle(
                           color: MinhasCores.branco,
-                          fontFamily: 'outfit-Light',
+                          fontFamily: 'outfit',
                           fontSize: 16,
                         ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                          textStyle: const TextStyle(
+                        fontFamily: 'Outfit',
+                      )),
+                      onPressed: () {},
+                      child: const Text(
+                        'Entre',
+                        style: TextStyle(color: MinhasCores.azul),
                       ),
                     ),
 
@@ -123,31 +134,45 @@ class _CadastroPageState extends State<CadastroPage> {
                         child: iconVisibility,
                       ),
                     ),
-
-                    // TextFormField(
-                    //   decoration: getAuthenticationInputDecoration1(
-                    //     'nome',
-                    //   ),
-                    // ),
-
-                    // const SizedBox(height: 16),
-                    // //barra de cadastro 'email'
-                    // TextFormField(
-                    //   decoration: getAuthenticationInputDecoration2('e-mail'),
-                    // ),
-
-                    // const SizedBox(height: 16),
-                    // //barra de cadastro 'senha'
-                    // TextFormField(
-                    //   decoration: getAuthenticationInputDecoration3('senha'),
-                    // ),
-
-                    // const SizedBox(height: 16),
-                    // //barra de cadastro'confirme senha'
-                    // TextFormField(
-                    //   decoration: getAuthenticationInputDecoration4(
-                    //       'digite a senha novamente'),
-                    // ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        backgroundColor: MinhasCores.rosa,
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        'cadastre-se',
+                        style: TextStyle(
+                            color: MinhasCores.branco, fontFamily: 'Outfit'),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        backgroundColor: MinhasCores.branco,
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        'continuar pelo google',
+                        style: TextStyle(
+                            color: MinhasCores.cinza, fontFamily: 'Outfit'),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        backgroundColor: MinhasCores.branco,
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        'continuar pelo facebook',
+                        style: TextStyle(
+                            color: MinhasCores.cinza, fontFamily: 'Outfit'),
+                      ),
+                    ),
                   ],
                 ),
               ),

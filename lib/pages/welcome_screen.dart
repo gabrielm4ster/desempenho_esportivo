@@ -1,5 +1,4 @@
-/* import 'package:counter_bloc/_comum/minhas_cores.dart';
-import 'package:counter_bloc/splash_screen.dart';
+import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,20 +13,29 @@ class WelcomeScreen extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/images/background.webp',
+              'assets/images/background2.webp',
               fit: BoxFit.fill,
             ),
           ),
-          Column(
-            children: [
-              Container(
-                child: Image.asset('logo1.png'),
-              )
-            ],
-          )
+          const Center(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Align(
+                    child: Text(
+                      'sejam bem vindo ao',
+                      style: TextStyle(
+                        color: MinhasCores.branco,
+                        fontFamily: 'StretchPro',
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ]),
+          ),
         ],
       ),
     );
   }
 }
- */
