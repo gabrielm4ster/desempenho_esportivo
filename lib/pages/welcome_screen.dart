@@ -1,6 +1,8 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -19,20 +21,21 @@ class WelcomeScreen extends StatelessWidget {
           ),
           const Center(
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Align(
-                    child: Text(
-                      'sejam bem vindo ao',
-                      style: TextStyle(
-                        color: MinhasCores.branco,
-                        fontFamily: 'StretchPro',
-                        fontSize: 20,
-                      ),
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Align(
+                  child: Text(
+                    'sejam bem vindo ao',
+                    style: TextStyle(
+                      color: MinhasCores.branco,
+                      fontFamily: 'StretchPro',
+                      fontSize: 20,
                     ),
                   ),
-                ]),
+                ),
+              ],
+            ),
           ),
         ],
       ),

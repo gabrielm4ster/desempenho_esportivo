@@ -1,5 +1,7 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:validatorless/validatorless.dart';
 
 class CadastroPage extends StatefulWidget {
@@ -147,6 +149,17 @@ class _CadastroPageState extends State<CadastroPage> {
                             color: MinhasCores.branco, fontFamily: 'Outfit'),
                       ),
                     ),
+                    const Center(
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            height: 20,
+                            width: 20,
+                          ),
+                        ],
+                      ),
+                    ),
+
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
