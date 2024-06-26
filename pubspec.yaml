@@ -78,7 +78,6 @@ flutter:
     - family: StretchPro
       fonts:
         - asset: assets/fonts/StretchPro.otf
-        - asset: assets/fonts/Stretch-Pro-regular.otf
           weight: 400
     
 
