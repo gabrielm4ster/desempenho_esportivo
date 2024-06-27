@@ -1,8 +1,8 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 
-class EscolhaDeEscola extends StatelessWidget {
-  const EscolhaDeEscola({super.key});
+class FaixaEtaria extends StatelessWidget {
+  const FaixaEtaria({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class EscolhaDeEscola extends StatelessWidget {
           Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 104.0, left: 40, right: 40),
+                padding: EdgeInsets.all(60.0),
                 child: Text(
-                  '''  QUAL ESCOLA VOCÊ DA TREINO?''',
+                  '''QUAL FAIXA ÉTARIA?''',
                   style: TextStyle(
                     color: MinhasCores.branco,
                     fontFamily: 'StretchPro',

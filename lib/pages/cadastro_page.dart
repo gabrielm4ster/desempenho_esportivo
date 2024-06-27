@@ -45,148 +45,187 @@ class _CadastroPageState extends State<CadastroPage> {
             ),
           ),
           Center(
-            child: Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Form(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Align(
-                      child: Text(
-                        'CADASTRE-SE',
-                        style: TextStyle(
-                          color: MinhasCores.branco,
-                          fontFamily: 'StretchPro',
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                    const Align(
-                      child: Text(
-                        'já tem uma conta?',
-                        style: TextStyle(
-                          color: MinhasCores.branco,
-                          fontFamily: 'outfit',
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                          textStyle: const TextStyle(
-                        fontFamily: 'Outfit',
-                      )),
-                      onPressed: () {},
-                      child: const Text(
-                        'Entre',
-                        style: TextStyle(color: MinhasCores.azul),
-                      ),
-                    ),
-
-                    //barra de cadastro 'nome'
-                    const SizedBox(height: 16),
-
-                    textInput(
-                      icon: Icons.person_outline,
-                      labelText: 'Nome completo',
-                      hintText: 'Digite seu nome',
-                      onChanged: (value) {},
-                      validator: Validatorless.required(
-                        'Nome é obrigatório.',
-                      ),
-                    ),
-
-                    textInput(
-                      icon: Icons.mail_outline,
-                      labelText: 'E-mail',
-                      hintText: 'Digite seu e-mail',
-                      keyboardType: TextInputType.emailAddress,
-                      onChanged: (value) {},
-                      validator: Validatorless.multiple([
-                        Validatorless.required('E-mail é obrigatório.'),
-                        Validatorless.email('Utilize um e-mail válido.')
-                      ]),
-                    ),
-
-                    textInput(
-                      icon: Icons.lock_outline,
-                      label: const Text('Senha'),
-                      obscureText: !showPassword,
-                      suffix: TapRegion(
-                        onTapInside: (_) {
-                          setState(() {
-                            showPassword = !showPassword;
-                          });
-                        },
-                        child: iconVisibility,
-                      ),
-                    ),
-
-                    textInput(
-                      icon: Icons.lock_outline,
-                      label: const Text('Confirmar senha'),
-                      obscureText: !showPassword,
-                      suffix: TapRegion(
-                        onTapInside: (_) {
-                          setState(() {
-                            showPassword = !showPassword;
-                          });
-                        },
-                        child: iconVisibility,
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        backgroundColor: MinhasCores.rosa,
-                      ),
-                      onPressed: () {},
-                      child: const Text(
-                        'cadastre-se',
-                        style: TextStyle(
-                            color: MinhasCores.branco, fontFamily: 'Outfit'),
-                      ),
-                    ),
-                    const Center(
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            height: 20,
-                            width: 20,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(40.0),
+                child: Form(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Align(
+                        child: Text(
+                          'CADASTRE-SE',
+                          style: TextStyle(
+                            color: MinhasCores.branco,
+                            fontFamily: 'StretchPro',
+                            fontSize: 20,
                           ),
-                        ],
+                        ),
                       ),
-                    ),
+                      const Align(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 13.0),
+                          child: Text(
+                            'já tem uma conta?',
+                            style: TextStyle(
+                              color: MinhasCores.branco,
+                              fontFamily: 'outfit',
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                            textStyle: const TextStyle(
+                          fontFamily: 'Outfit',
+                        )),
+                        onPressed: () {},
+                        child: const Text(
+                          'Entre',
+                          style: TextStyle(color: MinhasCores.azul),
+                        ),
+                      ),
 
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        backgroundColor: MinhasCores.branco,
+                      //barra de cadastro 'nome'
+                      const SizedBox(height: 16),
+
+                      textInput(
+                        icon: Icons.person_outline,
+                        labelText: 'Nome completo',
+                        hintText: 'Digite seu nome',
+                        onChanged: (value) {},
+                        validator: Validatorless.required(
+                          'Nome é obrigatório.',
+                        ),
                       ),
-                      onPressed: () {},
-                      child: const Text(
-                        'continuar pelo google',
-                        style: TextStyle(
-                            color: MinhasCores.cinza, fontFamily: 'Outfit'),
+
+                      textInput(
+                        icon: Icons.mail_outline,
+                        labelText: 'E-mail',
+                        hintText: 'Digite seu e-mail',
+                        keyboardType: TextInputType.emailAddress,
+                        onChanged: (value) {},
+                        validator: Validatorless.multiple([
+                          Validatorless.required('E-mail é obrigatório.'),
+                          Validatorless.email('Utilize um e-mail válido.')
+                        ]),
                       ),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        backgroundColor: MinhasCores.branco,
+
+                      textInput(
+                        icon: Icons.lock_outline,
+                        label: const Text('Senha'),
+                        obscureText: !showPassword,
+                        suffix: TapRegion(
+                          onTapInside: (_) {
+                            setState(() {
+                              showPassword = !showPassword;
+                            });
+                          },
+                          child: iconVisibility,
+                        ),
                       ),
-                      onPressed: () {},
-                      child: const Text(
-                        'continuar pelo facebook',
-                        style: TextStyle(
-                            color: MinhasCores.cinza, fontFamily: 'Outfit'),
+
+                      textInput(
+                        icon: Icons.lock_outline,
+                        label: const Text('Confirmar senha'),
+                        obscureText: !showPassword,
+                        suffix: TapRegion(
+                          onTapInside: (_) {
+                            setState(() {
+                              showPassword = !showPassword;
+                            });
+                          },
+                          child: iconVisibility,
+                        ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0),
+                        child: SizedBox(
+                          height: 40,
+                          width: 316,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              backgroundColor: MinhasCores.rosa,
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'cadastre-se',
+                              style: TextStyle(
+                                  color: MinhasCores.branco,
+                                  fontFamily: 'Outfit'),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 19.0, bottom: 23.0),
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/linha.webp',
+                                height: 2,
+                                width: 126.37,
+                              ),
+                              const Text(
+                                'Ou',
+                                style: TextStyle(
+                                    color: MinhasCores.branco,
+                                    fontFamily: 'Outfit'),
+                              ),
+                              Image.asset(
+                                'assets/images/linha.webp',
+                                height: 2,
+                                width: 126.37,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0, bottom: 8),
+                        child: SizedBox(
+                          height: 40,
+                          width: 316,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              backgroundColor: MinhasCores.branco,
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'continuar pelo google',
+                              style: TextStyle(
+                                  color: MinhasCores.cinza,
+                                  fontFamily: 'Outfit'),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
+                        width: 316,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            backgroundColor: MinhasCores.branco,
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            'continuar pelo facebook',
+                            style: TextStyle(
+                                color: MinhasCores.cinza, fontFamily: 'Outfit'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -209,6 +248,8 @@ Widget textInput({
   TextInputType? keyboardType,
   bool obscureText = false,
   Widget? suffix,
+  double? width,
+  double? height,
 }) {
   return Padding(
     padding: const EdgeInsets.symmetric(
@@ -220,12 +261,15 @@ Widget textInput({
       onChanged: onChanged,
       style: const TextStyle(
         color: Color(0xFF666F7B),
+        fontSize: 16,
       ),
       keyboardType: keyboardType,
       obscureText: obscureText,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(10.0),
         label: label,
         labelText: labelText,
+        floatingLabelBehavior: FloatingLabelBehavior.never,
         hintText: hintText,
         fillColor: MinhasCores.cinza,
         border: OutlineInputBorder(

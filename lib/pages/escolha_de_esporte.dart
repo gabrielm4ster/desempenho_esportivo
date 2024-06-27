@@ -16,95 +16,90 @@ class EscolhaDeEsporte extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
+          Column(
+            children: [
+              const Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 104.0, left: 40),
+                  child: Text(
+                    ''' QUAL ESPORTE VOCÊ DA TREINO?''',
+                    style: TextStyle(
+                      color: MinhasCores.branco,
+                      fontFamily: 'StretchPro',
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              Column(
                 children: [
-                  const Align(
-                    alignment: Alignment.center,
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                        width: 165.76,
+                        height: 156.46,
+                        child: Image.asset('assets/images/Futebol.webp')),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(10.0),
                     child: Text(
-                      ''' QUAL ESPORTE VOCÊ DA TREINO?''',
+                      'futebol',
                       style: TextStyle(
                         color: MinhasCores.branco,
                         fontFamily: 'StretchPro',
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: SizedBox(
-                              width: 165.76,
-                              height: 156.46,
-                              child: Image.asset('assets/images/Futebol.webp')),
-                        ),
-                        const Text(
-                          'futebol',
-                          style: TextStyle(
-                            color: MinhasCores.branco,
-                            fontFamily: 'StretchPro',
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: SizedBox(
-                              width: 165.76,
-                              height: 156.46,
-                              child:
-                                  Image.asset('assets/images/Basquete.webp')),
-                        ),
-                        const Text(
-                          'basquete',
-                          style: TextStyle(
-                            color: MinhasCores.branco,
-                            fontFamily: 'StretchPro',
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: SizedBox(
-                            width: 165.76,
-                            height: 156.46,
-                            child: Image.asset('assets/images/Volei.webp'),
-                          ),
-                        ),
-                        const Text(
-                          'vôlei',
-                          style: TextStyle(
-                            color: MinhasCores.branco,
-                            fontFamily: 'StretchPro',
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
                 ],
               ),
-            ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                        width: 165.76,
+                        height: 156.46,
+                        child: Image.asset('assets/images/Basquete.webp')),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'basquete',
+                      style: TextStyle(
+                        color: MinhasCores.branco,
+                        fontFamily: 'StretchPro',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                      width: 165.76,
+                      height: 156.46,
+                      child: Image.asset('assets/images/Volei.webp'),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'vôlei',
+                      style: TextStyle(
+                        color: MinhasCores.branco,
+                        fontFamily: 'StretchPro',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
         ],
       ),
