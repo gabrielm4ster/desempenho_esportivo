@@ -1,7 +1,6 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
+import 'package:desempenho_esportivo/pages/cadastro_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:validatorless/validatorless.dart';
 
 class LoginPage extends StatefulWidget {
@@ -65,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       const Align(
                         child: Padding(
-                          padding: EdgeInsets.only(top: 13.0),
+                          padding: EdgeInsets.only(top: 1.0),
                           child: Text(
                             'não tem uma conta?',
                             style: TextStyle(
@@ -89,7 +88,6 @@ class _LoginPageState extends State<LoginPage> {
                       ),
 
                       //barra de cadastro 'nome'
-                      const SizedBox(height: 16),
 
                       textInput(
                         icon: Icons.mail_outline,
@@ -140,15 +138,18 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                            textStyle: const TextStyle(
-                          fontFamily: 'Outfit',
-                        )),
-                        onPressed: () {},
-                        child: const Text(
-                          'esqueceu a senha?',
-                          style: TextStyle(color: MinhasCores.branco),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: TextButton(
+                          style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                            fontFamily: 'Outfit',
+                          )),
+                          onPressed: () {},
+                          child: const Text(
+                            'esqueceu a senha?',
+                            style: TextStyle(color: MinhasCores.branco),
+                          ),
                         ),
                       ),
                       Padding(
@@ -176,42 +177,54 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 13.0, bottom: 8),
-                        child: SizedBox(
-                          height: 40,
-                          width: 316,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              backgroundColor: MinhasCores.branco,
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          backgroundColor: MinhasCores.branco,
+                        ),
+                        onPressed: () {},
+                        child: const Row(
+                          children: [
+                            Image(
+                              image: AssetImage('assets/images/google.webp'),
+                              height: 24,
                             ),
-                            onPressed: () {},
-                            child: const Text(
-                              'continuar pelo google',
-                              style: TextStyle(
-                                  color: MinhasCores.cinza,
-                                  fontFamily: 'Outfit'),
+                            Padding(
+                              padding: EdgeInsets.only(left: 29.98),
+                              child: Text(
+                                'continuar pelo google',
+                                style: TextStyle(
+                                    color: MinhasCores.cinza,
+                                    fontFamily: 'Outfit'),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
-                      SizedBox(
-                        height: 40,
-                        width: 316,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            backgroundColor: MinhasCores.branco,
-                          ),
-                          onPressed: () {},
-                          child: const Text(
-                            'continuar pelo facebook',
-                            style: TextStyle(
-                                color: MinhasCores.cinza, fontFamily: 'Outfit'),
-                          ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          backgroundColor: MinhasCores.branco,
+                        ),
+                        onPressed: () {},
+                        child: const Row(
+                          children: [
+                            Image(
+                              image: AssetImage('assets/images/facebook.webp'),
+                              height: 24,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 29.98),
+                              child: Text(
+                                'continuar pelo facebook',
+                                style: TextStyle(
+                                    color: MinhasCores.cinza,
+                                    fontFamily: 'Outfit'),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -224,51 +237,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-}
-
-Widget textInput({
-  TextEditingController? controller,
-  Widget? label,
-  String? labelText,
-  String? hintText,
-  IconData? icon,
-  void Function(String)? onChanged,
-  String? initialValue,
-  String? Function(String?)? validator,
-  TextInputType? keyboardType,
-  bool obscureText = false,
-  Widget? suffix,
-  double? width,
-  double? height,
-}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(
-      vertical: 7.0,
-    ),
-    child: TextFormField(
-      controller: controller,
-      initialValue: initialValue,
-      onChanged: onChanged,
-      style: const TextStyle(
-        color: Color(0xFF666F7B),
-      ),
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      decoration: InputDecoration(
-        label: label,
-        labelText: labelText,
-        hintText: hintText,
-        fillColor: MinhasCores.cinza,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        prefixIcon: icon != null ? Icon(icon) : null,
-        filled: true,
-        hintStyle: TextStyle(
-          color: const Color(0xFF666F7B).withOpacity(0.4),
-        ),
-        suffix: suffix,
-      ),
-    ),
-  );
 }
