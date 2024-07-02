@@ -1,6 +1,6 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/widgets.dart';
 
 class FaixaEtaria extends StatelessWidget {
   const FaixaEtaria({super.key});
@@ -17,25 +17,16 @@ class FaixaEtaria extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.(),
-                  child: Text(
-                    'QUAL FAIXA ÉTARIA',
-                    style: TextStyle(
-                        fontFamily: 'StretchPro',
-                        color: MinhasCores.branco,
-                        fontSize: 20),
-                  ),
-                )
-              ],
-            ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('faixa etaria'),
           ),
+          Column(
+            children: [
+              OutlinedButton(onPressed: () {}, child: const Text('data'))
+            ],
+          )
         ],
-        // ),
-        // ],
       ),
     );
   }

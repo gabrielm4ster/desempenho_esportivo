@@ -20,12 +20,13 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           const Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Align(
-                  child: Text(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
                     'sejam bem vindo ao',
                     style: TextStyle(
                       color: MinhasCores.branco,
@@ -33,8 +34,9 @@ class WelcomeScreen extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                ),
-              ],
+                  SizedBox()
+                ],
+              ),
             ),
           ),
         ],
