@@ -25,21 +25,22 @@ class FaixaEtaria extends StatelessWidget {
           Column(
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 104.0, left: 40),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: SizedBox(
-                    height: 52,
-                    width: 309,
-                    child: Text(
-                      '''QUAL FAIXA ETARIA?''',
-                      style: TextStyle(
-                        color: MinhasCores.branco,
-                        fontFamily: 'StretchPro',
-                        fontSize: 20,
-                      ),
-                    ),
+                padding: EdgeInsets.only(top: 104.0),
+                child: Text(
+                  '''QUAL FAIXA ''',
+                  style: TextStyle(
+                    color: MinhasCores.branco,
+                    fontFamily: 'StretchPro',
+                    fontSize: 20,
                   ),
+                ),
+              ),
+              const Text(
+                '''ETARIA? ''',
+                style: TextStyle(
+                  color: MinhasCores.branco,
+                  fontFamily: 'StretchPro',
+                  fontSize: 20,
                 ),
               ),
               Center(
@@ -125,9 +126,11 @@ class FaixaEtaria extends StatelessWidget {
                               textStyle: const TextStyle(
                                 fontSize: 30,
                               ),
-                              side: const BorderSide(width: 1)),
+                              side: const BorderSide(
+                                width: 1,
+                              )),
                           child: const Text(
-                            'SUB 9',
+                            'SUB 13',
                             style: TextStyle(
                                 color: MinhasCores.branco,
                                 fontFamily: 'Outfit-Regular'),

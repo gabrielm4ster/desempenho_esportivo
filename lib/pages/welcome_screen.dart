@@ -2,7 +2,6 @@ import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -34,7 +33,9 @@ class WelcomeScreen extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                  SizedBox()
+                  SizedBox(
+                    child: Image(image: AssetImage('')),
+                  )
                 ],
               ),
             ),
