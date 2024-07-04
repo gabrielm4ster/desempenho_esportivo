@@ -47,6 +47,58 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [MinhasCores.rosa, MinhasCores.azul])),
+              child: NavigationBar(
+                height: 46,
+                backgroundColor: WidgetStateColor.transparent,
+                destinations: const [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: NavigationDestination(
+                      icon: Icon(
+                        Icons.home,
+                        color: MinhasCores.branco,
+                      ),
+                      label: 'home',
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: NavigationDestination(
+                        icon: Icon(
+                          Icons.sports_soccer,
+                          color: MinhasCores.branco,
+                        ),
+                        label: 'avaliação'),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: NavigationDestination(
+                        icon: Icon(
+                          Icons.assignment_ind,
+                          color: MinhasCores.branco,
+                        ),
+                        label: 'passaporte.b'),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: NavigationDestination(
+                        icon: Icon(
+                          Icons.edit_off_rounded,
+                          color: MinhasCores.branco,
+                        ),
+                        label: 'gestão'),
+                  ),
+                ],
+                indicatorColor: WidgetStateColor.transparent,
+              ),
+            ),
+          ),
         ],
       ),
     );
