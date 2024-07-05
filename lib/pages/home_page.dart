@@ -1,6 +1,6 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,9 +18,9 @@ class HomePage extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const Column(
+          Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 40.0, left: 20),
                 child: Text(
                   'BEM VINDO!',
@@ -30,72 +30,133 @@ class HomePage extends StatelessWidget {
                       fontSize: 20),
                 ),
               ),
-              Text(
+              const Text(
                 DateFormat.ABBR_MONTH_WEEKDAY_DAY,
                 style: TextStyle(
                     fontFamily: 'StretchPro',
                     color: MinhasCores.cinza_Claro,
                     fontSize: 20),
               ),
-            ],
-          ),
-          const Column(
-            children: [
               Padding(
-                padding: EdgeInsets.only(top: 100.0, left: 20, right: 20),
-                child: Center(child: SizedBox(child: TextField())),
-              )
+                padding: const EdgeInsets.only(top: 40.0, left: 21, right: 21),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  width: 347,
+                  height: 37,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                  child: const Padding(
+                    padding: EdgeInsets.only(right: 40.0),
+                    child: TextField(
+                      style: TextStyle(
+                        color: MinhasCores.branco,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 16.0),
+                child: Text(
+                  'Alunos',
+                  style: TextStyle(
+                      color: MinhasCores.branco,
+                      fontSize: 20,
+                      fontFamily: 'StretchPro'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0, left: 21, right: 21),
+                child: Container(
+                  width: 341,
+                  height: 62,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 14.0, left: 21, right: 21),
+                child: Container(
+                  width: 341,
+                  height: 62,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 14.0, left: 21, right: 21),
+                child: Container(
+                  width: 341,
+                  height: 62,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 14.0, left: 21, right: 21),
+                child: Container(
+                  width: 341,
+                  height: 62,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 14.0, left: 21, right: 21),
+                child: Container(
+                  width: 341,
+                  height: 62,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(13)),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                ),
+              ),
             ],
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
+              height: 56,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [MinhasCores.rosa, MinhasCores.azul])),
-              child: NavigationBar(
-                height: 46,
-                backgroundColor: WidgetStateColor.transparent,
-                destinations: const [
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                      icon: Icon(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 60.0),
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
                         Icons.home,
-                        color: MinhasCores.branco,
+                        color: Colors.white,
+                        size: 24,
                       ),
-                      label: 'home',
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.sports_soccer,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'avaliação'),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.assignment_ind,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'passaporte.b'),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.edit_off_rounded,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'gestão'),
-                  ),
-                ],
-                indicatorColor: WidgetStateColor.transparent,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

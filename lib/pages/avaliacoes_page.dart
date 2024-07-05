@@ -1,7 +1,5 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 
 class AvaliacoesPage extends StatelessWidget {
@@ -21,115 +19,61 @@ class AvaliacoesPage extends StatelessWidget {
           ),
           Column(
             children: [
-              Center(
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 67, left: 35.0),
-                    child: Row(
-                      children: [
-                        const Text(
-                          'avaliações',
-                          style: TextStyle(
-                              fontFamily: 'StretchPro',
-                              color: MinhasCores.branco,
-                              fontSize: 20),
+              AppBar(
+                backgroundColor: WidgetStateColor.transparent,
+                title: const Center(
+                  child: Text(
+                    'Avaliações',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'StretchPro',
+                        fontSize: 20),
+                  ),
+                ),
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 100.0),
+                child: Container(
+                  height: 47.62,
+                  width: 296.11,
+                  decoration: const BoxDecoration(
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                        textStyle: const TextStyle(
+                          fontSize: 30,
                         ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.logout_outlined,
-                              color: MinhasCores.branco,
-                            )),
+                        side: const BorderSide(
+                            width: 1, color: Colors.transparent)),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.sports_soccer,
+                          color: MinhasCores.branco,
+                        ),
+                        Text(
+                          'Técnica',
+                          style: TextStyle(
+                              fontFamily: 'Outfit', color: MinhasCores.branco),
+                        ),
                       ],
                     ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 178.0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      fixedSize: const Size(295.11, 46.62),
-                      textStyle: const TextStyle(
-                        fontSize: 30,
-                      ),
-                      side: const BorderSide(
-                        width: 1,
-                      )),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.sports_soccer,
-                        color: MinhasCores.branco,
-                      ),
-                      Text(
-                        'TÉCNICA',
-                        style: TextStyle(
-                            fontFamily: 'Outfit', color: MinhasCores.branco),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 41.0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      fixedSize: const Size(295.11, 46.62),
-                      textStyle: const TextStyle(
-                        fontSize: 30,
-                      ),
-                      side: const BorderSide(
-                        width: 1,
-                      )),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.psychology,
-                        color: MinhasCores.branco,
-                      ),
-                      Text(
-                        'PSICOLOGICA',
-                        style: TextStyle(
-                            fontFamily: 'Outfit', color: MinhasCores.branco),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 41.0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      fixedSize: const Size(295.11, 46.62),
-                      textStyle: const TextStyle(
-                        fontSize: 30,
-                      ),
-                      side: const BorderSide(
-                        width: 1,
-                      )),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.fitness_center,
-                        color: MinhasCores.branco,
-                      ),
-                      Text(
-                        'FISICA',
-                        style: TextStyle(
-                            fontFamily: 'Outfit', color: MinhasCores.branco),
-                      ),
-                    ],
                   ),
                 ),
               ),
@@ -139,8 +83,9 @@ class AvaliacoesPage extends StatelessWidget {
                   height: 47.62,
                   width: 296.11,
                   decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [MinhasCores.rosa, MinhasCores.azul])),
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
                   child: OutlinedButton(
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
@@ -156,7 +101,73 @@ class AvaliacoesPage extends StatelessWidget {
                           color: MinhasCores.branco,
                         ),
                         Text(
-                          'TATICA',
+                          'Psicologia',
+                          style: TextStyle(
+                              fontFamily: 'Outfit', color: MinhasCores.branco),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 41.0),
+                child: Container(
+                  height: 47.62,
+                  width: 296.11,
+                  decoration: const BoxDecoration(
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                        textStyle: const TextStyle(
+                          fontSize: 30,
+                        ),
+                        side: const BorderSide(
+                            width: 1, color: Colors.transparent)),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.fitness_center,
+                          color: MinhasCores.branco,
+                        ),
+                        Text(
+                          'Fisica',
+                          style: TextStyle(
+                              fontFamily: 'Outfit', color: MinhasCores.branco),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 41.0),
+                child: Container(
+                  height: 47.62,
+                  width: 296.11,
+                  decoration: const BoxDecoration(
+                      border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                        textStyle: const TextStyle(
+                          fontSize: 30,
+                        ),
+                        side: const BorderSide(
+                            width: 1, color: Colors.transparent)),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.run_circle_outlined,
+                          color: MinhasCores.branco,
+                        ),
+                        Text(
+                          'Tatica',
                           style: TextStyle(
                               fontFamily: 'Outfit', color: MinhasCores.branco),
                         ),
@@ -170,52 +181,24 @@ class AvaliacoesPage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
+              height: 56,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [MinhasCores.rosa, MinhasCores.azul])),
-              child: NavigationBar(
-                height: 56,
-                backgroundColor: WidgetStateColor.transparent,
-                destinations: const [
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                      icon: Icon(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 60.0),
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
                         Icons.home,
-                        color: MinhasCores.branco,
+                        color: Colors.white,
+                        size: 24,
                       ),
-                      label: 'home',
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.sports_soccer,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'avaliação'),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.assignment_ind,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'passaporte.b'),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 30.0),
-                    child: NavigationDestination(
-                        icon: Icon(
-                          Icons.edit_off_rounded,
-                          color: MinhasCores.branco,
-                        ),
-                        label: 'gestão'),
-                  ),
-                ],
-                indicatorColor: WidgetStateColor.transparent,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

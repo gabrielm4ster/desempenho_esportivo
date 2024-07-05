@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:desempenho_esportivo/pages/avaliacoes_page.dart';
 import 'package:desempenho_esportivo/pages/cadastro_page.dart';
 import 'package:desempenho_esportivo/pages/escolha_de_escola.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: AvaliacoesPage(),
+      home: HomePage(),
     );
   }
 }
