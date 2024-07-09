@@ -1,8 +1,5 @@
-import 'dart:developer';
-
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:intl/intl.dart';
 
@@ -25,13 +22,13 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 60.0),
             child: Column(
               children: [
-                const Align(
+                Align(
                   alignment: Alignment.topLeft,
                   child: Column(
                     children: [
                       Row(
                         children: [
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(left: 20.0),
                             child: Text(
                               'BEM VINDO!',
@@ -42,20 +39,24 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 100.0),
-                            child: Icon(
-                              Icons.logout,
-                              color: MinhasCores.branco,
-                              size: 27,
-                            ),
-                          ),
+                              padding: const EdgeInsets.only(left: 100.0),
+                              child: IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.logout,
+                                    size: 27,
+                                    color: MinhasCores.branco,
+                                  ))),
                         ],
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(left: 20.0),
                         child: Align(
                             alignment: Alignment.topLeft,
-                            child: Text(DateFormat.ABBR_MONTH_WEEKDAY_DAY)),
+                            child: Text(
+                              DateFormat.ABBR_MONTH_WEEKDAY_DAY,
+                              style: TextStyle(color: MinhasCores.branco),
+                            )),
                       )
                     ],
                   ),
@@ -78,6 +79,8 @@ class HomePage extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.only(right: 40.0),
                       child: TextField(
+                        decoration:
+                            InputDecoration(suffixIcon: Icon(Icons.search)),
                         style: TextStyle(
                           color: MinhasCores.branco,
                         ),
