@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:intl/intl.dart';
 
@@ -238,30 +241,104 @@ class HomePage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 56,
+              height: 66,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [MinhasCores.rosa, MinhasCores.azul])),
-              child: const Padding(
-                padding: EdgeInsets.only(left: 20.0),
-                child: Row(
-                  children: [
-                    SizedBox(
-                        height: 40,
-                        width: 55,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 38, right: 38, bottom: 5),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.home,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'Home',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27.0),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.sports_soccer,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'avaliacoes',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27.0),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.assignment_ind_outlined,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'passaporte.B',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(
-                              Icons.home,
-                              size: 27,
+                            IconButton(
+                                iconSize: 27,
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.home,
+                                  color: Colors.white,
+                                )),
+                            const Text(
+                              'gestão',
+                              style:
+                                  TextStyle(fontSize: 9, color: Colors.white),
                             ),
-                            Text(
-                              'data',
-                              style: TextStyle(fontSize: 9),
-                            )
                           ],
-                        ))
-                  ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

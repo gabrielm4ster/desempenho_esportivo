@@ -31,15 +31,12 @@ class AvaliacoesPage extends StatelessWidget {
                   ),
                 ),
                 actions: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.logout,
-                        color: Colors.white,
-                        size: 24,
-                      ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.logout,
+                      color: Colors.white,
+                      size: 24,
                     ),
                   )
                 ],
@@ -181,23 +178,104 @@ class AvaliacoesPage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 56,
+              height: 66,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [MinhasCores.rosa, MinhasCores.azul])),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 60.0),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.home,
-                        color: Colors.white,
-                        size: 24,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 38, right: 38, bottom: 5),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.home,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'Home',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27.0),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.sports_soccer,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'avaliacoes',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 27.0),
+                        child: SizedBox(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                  iconSize: 27,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.assignment_ind_outlined,
+                                    color: Colors.white,
+                                  )),
+                              const Text(
+                                'passaporte.B',
+                                style:
+                                    TextStyle(fontSize: 9, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            IconButton(
+                                iconSize: 27,
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.home,
+                                  color: Colors.white,
+                                )),
+                            const Text(
+                              'gestão',
+                              style:
+                                  TextStyle(fontSize: 9, color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
