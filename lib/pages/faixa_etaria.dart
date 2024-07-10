@@ -85,17 +85,16 @@ class FaixaEtaria extends StatelessWidget {
                           height: 62.47,
                           width: 341.02,
                           decoration: const BoxDecoration(
-                              border: GradientBoxBorder(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color(0xFF981DB9),
-                                    Color(0xFF0F76CE)
-                                  ],
-                                ),
+                            border: GradientBoxBorder(
+                              gradient: LinearGradient(
+                                colors: [Color(0xFF981DB9), Color(0xFF0F76CE)],
                               ),
-                              shape: BoxShape.rectangle,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(13))),
+                            ),
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(13),
+                            ),
+                          ),
                           child: OutlinedButton(
                             onPressed: () {},
                             style: OutlinedButton.styleFrom(

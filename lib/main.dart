@@ -7,6 +7,8 @@ import 'package:desempenho_esportivo/pages/escolha_de_esporte.dart';
 import 'package:desempenho_esportivo/pages/faixa_etaria.dart';
 import 'package:desempenho_esportivo/pages/home_page.dart';
 import 'package:desempenho_esportivo/pages/login_page.dart';
+import 'package:desempenho_esportivo/pages/passaporte_b.dart';
+import 'package:desempenho_esportivo/pages/psicol%C3%B3gica.dart';
 import 'package:desempenho_esportivo/pages/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: HomePage(),
+      home: Psicologica(),
     );
   }
 }

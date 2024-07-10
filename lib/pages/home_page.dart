@@ -1,4 +1,5 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
+import 'package:desempenho_esportivo/pages/avaliacoes_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:intl/intl.dart';
@@ -263,7 +264,12 @@ class HomePage extends StatelessWidget {
                             children: [
                               IconButton(
                                   iconSize: 27,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pushReplacement(MaterialPageRoute(
+                                      builder: (context) => const HomePage(),
+                                    ));
+                                  },
                                   icon: const Icon(
                                     Icons.home,
                                     color: Colors.white,
@@ -285,7 +291,13 @@ class HomePage extends StatelessWidget {
                             children: [
                               IconButton(
                                   iconSize: 27,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pushReplacement(MaterialPageRoute(
+                                      builder: (context) =>
+                                          const AvaliacoesPage(),
+                                    ));
+                                  },
                                   icon: const Icon(
                                     Icons.sports_soccer,
                                     color: Colors.white,
