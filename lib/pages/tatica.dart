@@ -4,10 +4,9 @@ import 'package:desempenho_esportivo/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:animated_rating_stars/animated_rating_stars.dart';
-import 'package:icon_decoration/icon_decoration.dart';
 
-class Psicologica extends StatelessWidget {
-  const Psicologica({super.key});
+class Tatica extends StatelessWidget {
+  const Tatica({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class Psicologica extends StatelessWidget {
                   child: Align(
                       alignment: Alignment.topCenter,
                       child: Text(
-                        'Psicólogica',
+                        'Tática',
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'StretchPro',
@@ -113,7 +112,7 @@ class Psicologica extends StatelessWidget {
                                             child: TextButton(
                                                 onPressed: () {},
                                                 child: const Text(
-                                                  'Foco',
+                                                  'Estratégia',
                                                   style: TextStyle(
                                                     color: MinhasCores.branco,
                                                     fontFamily: 'outfit',
@@ -143,7 +142,7 @@ class Psicologica extends StatelessWidget {
                                             child: TextButton(
                                                 onPressed: () {},
                                                 child: const Text(
-                                                  'Confiança',
+                                                  'Análise',
                                                   style: TextStyle(
                                                     color: MinhasCores.branco,
                                                     fontFamily: 'outfit',
@@ -173,7 +172,7 @@ class Psicologica extends StatelessWidget {
                                             child: TextButton(
                                               onPressed: () {},
                                               child: const Text(
-                                                'Resiliência',
+                                                'Comunicação',
                                                 style: TextStyle(
                                                   color: MinhasCores.branco,
                                                   fontFamily: 'outfit',
@@ -295,191 +294,7 @@ class Psicologica extends StatelessWidget {
                                                   padding: EdgeInsets.only(
                                                       top: 10.59, bottom: 12.0),
                                                   child: Text(
-                                                    'Avaliacão - O atleta está concentrado?',
-                                                    style: TextStyle(
-                                                        color:
-                                                            MinhasCores.branco,
-                                                        fontFamily: 'outfit',
-                                                        fontSize: 15),
-                                                  ),
-                                                ),
-                                                AnimatedRatingStars(
-                                                  onChanged: (p0) {},
-                                                  customFilledIcon: Icons.star,
-                                                  customHalfFilledIcon:
-                                                      Icons.star,
-                                                  customEmptyIcon:
-                                                      Icons.star_border,
-                                                  filledColor: MinhasCores.azul,
-                                                  starSize: 35,
-                                                  emptyColor: MinhasCores.azul,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 20),
-                                        child: Container(
-                                          height: 100,
-                                          width: 361.54,
-                                          decoration: const BoxDecoration(
-                                            border: GradientBoxBorder(
-                                                gradient:
-                                                    Meugradiente.gradiente),
-                                            shape: BoxShape.rectangle,
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(23),
-                                            ),
-                                          ),
-                                          child: Center(
-                                            child: Column(
-                                              children: [
-                                                const Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 10.59, bottom: 12.0),
-                                                  child: Text(
-                                                    'Avaliacão - O atleta está reagindo rápido?',
-                                                    style: TextStyle(
-                                                        color:
-                                                            MinhasCores.branco,
-                                                        fontFamily: 'outfit',
-                                                        fontSize: 15),
-                                                  ),
-                                                ),
-                                                AnimatedRatingStars(
-                                                  onChanged: (p0) {},
-                                                  customFilledIcon: Icons.star,
-                                                  customHalfFilledIcon:
-                                                      Icons.star,
-                                                  customEmptyIcon:
-                                                      Icons.star_border,
-                                                  filledColor: MinhasCores.azul,
-                                                  starSize: 35,
-                                                  emptyColor: MinhasCores.azul,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 20),
-                                        child: Container(
-                                          height: 100,
-                                          width: 361.54,
-                                          decoration: const BoxDecoration(
-                                            border: GradientBoxBorder(
-                                                gradient:
-                                                    Meugradiente.gradiente),
-                                            shape: BoxShape.rectangle,
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(23),
-                                            ),
-                                          ),
-                                          child: Center(
-                                            child: Column(
-                                              children: [
-                                                const Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 10.59, bottom: 12.0),
-                                                  child: Text(
-                                                    'Avaliacão - Velocidade de reação é boa?',
-                                                    style: TextStyle(
-                                                        color:
-                                                            MinhasCores.branco,
-                                                        fontFamily: 'outfit',
-                                                        fontSize: 15),
-                                                  ),
-                                                ),
-                                                AnimatedRatingStars(
-                                                  onChanged: (p0) {},
-                                                  customFilledIcon: Icons.star,
-                                                  customHalfFilledIcon:
-                                                      Icons.star,
-                                                  customEmptyIcon:
-                                                      Icons.star_border,
-                                                  filledColor: MinhasCores.azul,
-                                                  starSize: 35,
-                                                  emptyColor: MinhasCores.azul,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 20),
-                                        child: Container(
-                                          height: 100,
-                                          width: 361.54,
-                                          decoration: const BoxDecoration(
-                                            border: GradientBoxBorder(
-                                                gradient:
-                                                    Meugradiente.gradiente),
-                                            shape: BoxShape.rectangle,
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(23),
-                                            ),
-                                          ),
-                                          child: Center(
-                                            child: Column(
-                                              children: [
-                                                const Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 10.59, bottom: 12.0),
-                                                  child: Text(
-                                                    'Avaliacão - O atleta parece confiante?',
-                                                    style: TextStyle(
-                                                        color:
-                                                            MinhasCores.branco,
-                                                        fontFamily: 'outfit',
-                                                        fontSize: 15),
-                                                  ),
-                                                ),
-                                                AnimatedRatingStars(
-                                                  onChanged: (p0) {},
-                                                  customFilledIcon: Icons.star,
-                                                  customHalfFilledIcon:
-                                                      Icons.star,
-                                                  customEmptyIcon:
-                                                      Icons.star_border,
-                                                  filledColor: MinhasCores.azul,
-                                                  starSize: 35,
-                                                  emptyColor: MinhasCores.azul,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 20),
-                                        child: Container(
-                                          height: 100,
-                                          width: 361.54,
-                                          decoration: const BoxDecoration(
-                                            border: GradientBoxBorder(
-                                                gradient:
-                                                    Meugradiente.gradiente),
-                                            shape: BoxShape.rectangle,
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(23),
-                                            ),
-                                          ),
-                                          child: Center(
-                                            child: Column(
-                                              children: [
-                                                const Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 10.59, bottom: 12.0),
-                                                  child: Text(
-                                                    'Avaliacão - Ele parece seguro de suas decisões?',
+                                                    'Avaliacão - O atleta entende os objetivos táticos?',
                                                     style: TextStyle(
                                                         color:
                                                             MinhasCores.branco,
@@ -525,7 +340,7 @@ class Psicologica extends StatelessWidget {
                                                   padding: EdgeInsets.only(
                                                       top: 10.59, bottom: 12.0),
                                                   child: Text(
-                                                    'Avaliação - Ele confia em sua equipe?',
+                                                    'Avaliacão - O atleta aplica a estratégia?',
                                                     style: TextStyle(
                                                         color:
                                                             MinhasCores.branco,
@@ -571,7 +386,53 @@ class Psicologica extends StatelessWidget {
                                                   padding: EdgeInsets.only(
                                                       top: 10.59, bottom: 12.0),
                                                   child: Text(
-                                                    'Avaliacão - Ele trata seus colegas com respeito?',
+                                                    'Avaliacão - O atleta segue o plano de jogo?',
+                                                    style: TextStyle(
+                                                        color:
+                                                            MinhasCores.branco,
+                                                        fontFamily: 'outfit',
+                                                        fontSize: 15),
+                                                  ),
+                                                ),
+                                                AnimatedRatingStars(
+                                                  onChanged: (p0) {},
+                                                  customFilledIcon: Icons.star,
+                                                  customHalfFilledIcon:
+                                                      Icons.star,
+                                                  customEmptyIcon:
+                                                      Icons.star_border,
+                                                  filledColor: MinhasCores.azul,
+                                                  starSize: 35,
+                                                  emptyColor: MinhasCores.azul,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 20),
+                                        child: Container(
+                                          height: 100,
+                                          width: 361.54,
+                                          decoration: const BoxDecoration(
+                                            border: GradientBoxBorder(
+                                                gradient:
+                                                    Meugradiente.gradiente),
+                                            shape: BoxShape.rectangle,
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(23),
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Column(
+                                              children: [
+                                                const Padding(
+                                                  padding: EdgeInsets.only(
+                                                      top: 10.59, bottom: 12.0),
+                                                  child: Text(
+                                                    'Avaliacão - identifica pontos fortes e fracos?',
                                                     style: TextStyle(
                                                         color:
                                                             MinhasCores.branco,
@@ -617,12 +478,150 @@ class Psicologica extends StatelessWidget {
                                                   padding: EdgeInsets.only(
                                                       top: 10.59, bottom: 12.0),
                                                   child: Text(
-                                                    'Avaliacão - Ele é respeitoso com os árbitros?',
+                                                    'Avaliacão - O atleta é consistente no jogo?',
                                                     style: TextStyle(
                                                         color:
                                                             MinhasCores.branco,
                                                         fontFamily: 'outfit',
-                                                        fontSize: 15),
+                                                        fontSize: 13),
+                                                  ),
+                                                ),
+                                                AnimatedRatingStars(
+                                                  onChanged: (p0) {},
+                                                  customFilledIcon: Icons.star,
+                                                  customHalfFilledIcon:
+                                                      Icons.star,
+                                                  customEmptyIcon:
+                                                      Icons.star_border,
+                                                  filledColor: MinhasCores.azul,
+                                                  starSize: 35,
+                                                  emptyColor: MinhasCores.azul,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 20),
+                                        child: Container(
+                                          height: 100,
+                                          width: 361.54,
+                                          decoration: const BoxDecoration(
+                                            border: GradientBoxBorder(
+                                                gradient:
+                                                    Meugradiente.gradiente),
+                                            shape: BoxShape.rectangle,
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(23),
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Column(
+                                              children: [
+                                                const Padding(
+                                                  padding: EdgeInsets.only(
+                                                      top: 10.59, bottom: 12.0),
+                                                  child: Text(
+                                                    'Avaliação - O atleta se adapta aos adversários?',
+                                                    style: TextStyle(
+                                                        color:
+                                                            MinhasCores.branco,
+                                                        fontFamily: 'outfit',
+                                                        fontSize: 13),
+                                                  ),
+                                                ),
+                                                AnimatedRatingStars(
+                                                  onChanged: (p0) {},
+                                                  customFilledIcon: Icons.star,
+                                                  customHalfFilledIcon:
+                                                      Icons.star,
+                                                  customEmptyIcon:
+                                                      Icons.star_border,
+                                                  filledColor: MinhasCores.azul,
+                                                  starSize: 35,
+                                                  emptyColor: MinhasCores.azul,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 20),
+                                        child: Container(
+                                          height: 100,
+                                          width: 361.54,
+                                          decoration: const BoxDecoration(
+                                            border: GradientBoxBorder(
+                                                gradient:
+                                                    Meugradiente.gradiente),
+                                            shape: BoxShape.rectangle,
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(23),
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Column(
+                                              children: [
+                                                const Padding(
+                                                  padding: EdgeInsets.only(
+                                                      top: 10.59, bottom: 12.0),
+                                                  child: Text(
+                                                    'Avaliacão - O atleta se comunica bem?',
+                                                    style: TextStyle(
+                                                        color:
+                                                            MinhasCores.branco,
+                                                        fontFamily: 'outfit',
+                                                        fontSize: 13),
+                                                  ),
+                                                ),
+                                                AnimatedRatingStars(
+                                                  onChanged: (p0) {},
+                                                  customFilledIcon: Icons.star,
+                                                  customHalfFilledIcon:
+                                                      Icons.star,
+                                                  customEmptyIcon:
+                                                      Icons.star_border,
+                                                  filledColor: MinhasCores.azul,
+                                                  starSize: 35,
+                                                  emptyColor: MinhasCores.azul,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 20),
+                                        child: Container(
+                                          height: 100,
+                                          width: 361.54,
+                                          decoration: const BoxDecoration(
+                                            border: GradientBoxBorder(
+                                                gradient:
+                                                    Meugradiente.gradiente),
+                                            shape: BoxShape.rectangle,
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(23),
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Column(
+                                              children: [
+                                                const Padding(
+                                                  padding: EdgeInsets.only(
+                                                      top: 10.59, bottom: 12.0),
+                                                  child: Text(
+                                                    'Avaliacão - O atleta revisa os relatórios pós-jogo?',
+                                                    style: TextStyle(
+                                                        color:
+                                                            MinhasCores.branco,
+                                                        fontFamily: 'outfit',
+                                                        fontSize: 13),
                                                   ),
                                                 ),
                                                 AnimatedRatingStars(
@@ -663,7 +662,7 @@ class Psicologica extends StatelessWidget {
                                                   padding: EdgeInsets.only(
                                                       top: 10.59, bottom: 12.0),
                                                   child: Text(
-                                                    'Avaliacão - Ele mostra respeito pelos treinadores?',
+                                                    'Avaliacão - O atleta recebe e aplica o feedback?',
                                                     style: TextStyle(
                                                         color:
                                                             MinhasCores.branco,
