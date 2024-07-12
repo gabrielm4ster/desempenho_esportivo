@@ -2,6 +2,7 @@ import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:desempenho_esportivo/pages/avaliacoes_page.dart';
 import 'package:desempenho_esportivo/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:animated_rating_stars/animated_rating_stars.dart';
 
@@ -11,6 +12,15 @@ class Tatica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: GradientAppBar(
+        gradient:
+            const LinearGradient(colors: [MinhasCores.rosa, MinhasCores.azul]),
+        title: const Text(
+          'Tática',
+          style: TextStyle(fontFamily: 'StretchPro', fontSize: 20),
+        ),
+        centerTitle: true,
+      ),
       backgroundColor: MinhasCores.cinza,
       body: Stack(
         children: [
@@ -24,22 +34,9 @@ class Tatica extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                const Center(
-                    child: Padding(
-                  padding: EdgeInsets.only(top: 62.0),
-                  child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        'Tática',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'StretchPro',
-                            fontSize: 20),
-                      )),
-                )),
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 100.0),
+                    padding: const EdgeInsets.only(top: 17.0),
                     child: Align(
                       alignment: Alignment.topCenter,
                       child: Column(
