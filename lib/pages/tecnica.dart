@@ -1,4 +1,7 @@
 // import 'package:desempenho_esportivo/core/ui/widgets/info_user/info_user.dart';
+
+import 'package:desempenho_esportivo/core/ui/widgets/avaliacao.dart';
+import 'package:desempenho_esportivo/core/ui/widgets/estatistica_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
@@ -10,23 +13,23 @@ import 'package:desempenho_esportivo/pages/home_page.dart';
 class Tecnica extends StatelessWidget {
   const Tecnica({super.key});
 
-  static final List<Map<String, dynamic>> _teste = [
-    {
-      'titulo': 'sub 13',
-    },
-    {
-      'titulo': 'sub 15',
-    },
-    {
-      'titulo': 'sub 16',
-    },
-    {
-      'titulo': 'sub 17',
-    },
-    {
-      'titulo': 'sub 18',
-    },
-  ];
+  // static final List<Map<String, dynamic>> _teste = [
+  //   {
+  //     'titulo': 'sub 13',
+  //   },
+  //   {
+  //     'titulo': 'sub 15',
+  //   },
+  //   {
+  //     'titulo': 'sub 16',
+  //   },
+  //   {
+  //     'titulo': 'sub 17',
+  //   },
+  //   {
+  //     'titulo': 'sub 18',
+  //   },
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,24 +65,75 @@ class Tecnica extends StatelessWidget {
                 //       categoria: _teste[index]['titulo'] as String),
                 // ),
                 ChitDate(),
-
-                Avaliacao(
-                  chutesAcertados: 0,
-                  chutesFeitos: 0,
-                  chuteserrados: 0,
+                EstatisticaContainer(
+                  titulo: 'avaliacao chutes dentro da area',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
                 ),
-
-                Avaliacao(
-                  chutesAcertados: 0,
-                  chutesFeitos: 0,
-                  chuteserrados: 0,
+                EstatisticaContainer(
+                  titulo: 'avaliacao fora da área',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
                 ),
-
-                Avaliacao(
-                  chutesAcertados: 0,
-                  chutesFeitos: 0,
-                  chuteserrados: 0,
+                EstatisticaContainer(
+                  titulo: 'avaliacao Pẽnalti',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
                 ),
+                EstatisticaContainer(
+                  titulo: 'avaliacao Dominio e passe',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
+                ),
+                EstatisticaContainer(
+                  titulo: 'avaliacao cruzamentos',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
+                ),
+                EstatisticaContainer(
+                  titulo: 'avaliacao passo na frente',
+                  icone: Icons.sports_soccer,
+                  descricao: 'chutes feitos',
+                  chutesFeitos: 2,
+                  chutesAcertados: 3,
+                  chutesErrados: 4,
+                  descricao2: 'chutes certos',
+                  descricao3: 'chutes errados',
+                  descricao4: '',
+                ),
+                SizedBox(
+                  height: 60,
+                )
               ],
             ),
           ),
@@ -238,65 +292,6 @@ class ChitDate extends StatelessWidget {
           color: MinhasCores.branco,
           fontFamily: 'outfit',
           fontSize: 10,
-        ),
-      ),
-    );
-  }
-}
-
-class Avaliacao extends StatelessWidget {
-  const Avaliacao({
-    super.key,
-    this.chutesFeitos,
-    this.chutesAcertados,
-    this.chuteserrados,
-  });
-
-  final int? chutesFeitos;
-  final int? chutesAcertados;
-  final int? chuteserrados;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Container(
-        height: 111.23,
-        width: 361.17,
-        decoration: const BoxDecoration(
-          border: GradientBoxBorder(
-            gradient: LinearGradient(
-              colors: [Color(0xFF981DB9), Color(0xFF0F76CE)],
-            ),
-          ),
-          shape: BoxShape.rectangle,
-          borderRadius: BorderRadius.all(
-            Radius.circular(23),
-          ),
-        ),
-        child: const Column(
-          children: [
-            Text(
-              'Avaliação - Chutes dentro da área',
-              style: TextStyle(
-                color: MinhasCores.branco,
-                fontFamily: 'outfit',
-                fontSize: 15,
-              ),
-            ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Icon(
-                      Icons.sports_soccer,
-                      color: MinhasCores.branco,
-                    ),
-                  ],
-                )
-              ],
-            )
-          ],
         ),
       ),
     );
