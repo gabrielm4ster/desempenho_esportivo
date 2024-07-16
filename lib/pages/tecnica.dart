@@ -1,7 +1,6 @@
 // import 'package:desempenho_esportivo/core/ui/widgets/info_user/info_user.dart';
 
 import 'package:desempenho_esportivo/core/ui/widgets/avaliacao.dart';
-import 'package:desempenho_esportivo/core/ui/widgets/estatistica_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
@@ -52,94 +51,62 @@ class Tecnica extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             child: Column(
               children: [
-                InfoUser(),
-                SizedBox(
-                  height: 16,
+                const InfoUser(),
+                const SizedBox(
+                  height: 10,
                 ),
-                // ListView.builder(
-                //   itemCount: _teste.length,
-                //   itemBuilder: (context, index) => ChipFaixaCategoria(
-                //       categoria: _teste[index]['titulo'] as String),
-                // ),
-                ChitDate(),
-                EstatisticaContainer(
-                  titulo: 'avaliacao chutes dentro da area',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
+                const ChitDate(),
+                ListView.builder(
+                  itemCount: 2,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    switch (index) {
+                      case 1:
+                        return widgetTipo1();
+                      case 2:
+                        return widgetTipo2();
+                      default:
+                        return const SizedBox.shrink();
+                    }
+                  },
                 ),
-                EstatisticaContainer(
-                  titulo: 'avaliacao fora da área',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
-                ),
-                EstatisticaContainer(
-                  titulo: 'avaliacao Pẽnalti',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
-                ),
-                EstatisticaContainer(
-                  titulo: 'avaliacao Dominio e passe',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
-                ),
-                EstatisticaContainer(
-                  titulo: 'avaliacao cruzamentos',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
-                ),
-                EstatisticaContainer(
-                  titulo: 'avaliacao passo na frente',
-                  icone: Icons.sports_soccer,
-                  descricao: 'chutes feitos',
-                  chutesFeitos: 2,
-                  chutesAcertados: 3,
-                  chutesErrados: 4,
-                  descricao2: 'chutes certos',
-                  descricao3: 'chutes errados',
-                  descricao4: '',
-                ),
-                SizedBox(
-                  height: 60,
-                )
               ],
             ),
           ),
           const AppBarButton(),
         ],
       ),
+    );
+  }
+
+  Widget widgetTipo1() {
+    return const Avaliacao(
+      quantidade: '2',
+      descricao: 'Descrição Tipo 1',
+      icone: Icon(Icons.abc_rounded, color: Colors.blue),
+      quantidade2: '2',
+      descricao2: 'Descrição Tipo 1',
+      icone2: Icon(Icons.abc_outlined, color: Colors.blue),
+      quantidade3: '3',
+      descricao3: 'Descrição Tipo 1',
+      icone3: Icon(Icons.social_distance, color: Colors.blue),
+    );
+  }
+
+  Widget widgetTipo2() {
+    return const Avaliacao(
+      quantidade: '2',
+      descricao: 'Descrição Tipo 1',
+      icone: Icon(Icons.star, color: Colors.blue),
+      quantidade2: '2',
+      descricao2: 'Descrição Tipo 1',
+      icone2: Icon(Icons.sports_soccer, color: Colors.blue),
+      quantidade3: '3',
+      descricao3: 'Descrição Tipo 1',
+      icone3: Icon(Icons.sports_soccer, color: Colors.blue),
     );
   }
 }
