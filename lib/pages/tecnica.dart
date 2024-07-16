@@ -30,6 +30,42 @@ class Tecnica extends StatelessWidget {
   //   },
   // ];
 
+  static final List<Map<String, dynamic>> parteDeBaixo = [
+    {
+      'quantidade': '2',
+      'descricao': 'Descrição Tipo 1',
+      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
+      'quantidade2': '2',
+      'descricao2': 'Descrição Tipo 1',
+      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
+      'quantidade3': '3',
+      'descricao3': 'Descrição Tipo 1',
+      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+    },
+    {
+      'quantidade': '2',
+      'descricao': 'Descrição Tipo 1',
+      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
+      'quantidade2': '2',
+      'descricao2': 'Descrição Tipo 1',
+      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
+      'quantidade3': '3',
+      'descricao3': 'Descrição Tipo 1',
+      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+    },
+    {
+      'quantidade': '2',
+      'descricao': 'Descrição Tipo 1',
+      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
+      'quantidade2': '2',
+      'descricao2': 'Descrição Tipo 1',
+      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
+      'quantidade3': '3',
+      'descricao3': 'Descrição Tipo 1',
+      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,14 +99,25 @@ class Tecnica extends StatelessWidget {
                   itemCount: 2,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {
-                    switch (index) {
-                      case 1:
-                        return widgetTipo1();
-                      case 2:
-                        return widgetTipo2();
-                      default:
-                        return const SizedBox.shrink();
-                    }
+                    return Avaliacao(
+                      quantidade: parteDeBaixo[index]['quantidade'],
+                      descricao: parteDeBaixo[index]['descricao'],
+                      icone: parteDeBaixo[index]['icone'],
+                      quantidade2: parteDeBaixo[index]['quantidade2'],
+                      descricao2: parteDeBaixo[index]['descricao2'],
+                      icone2: parteDeBaixo[index]['icone2'],
+                      quantidade3: parteDeBaixo[index]['quantidade3'],
+                      descricao3: parteDeBaixo[index]['descricao3'],
+                      icone3: parteDeBaixo[index]['icone3'],
+                    );
+                    // switch (index) {
+                    //   case 1:
+                    //     return widgetTipo1();
+                    //   case 2:
+                    //     return widgetTipo2();
+                    //   default:
+                    //     return const SizedBox.shrink();
+                    // }
                   },
                 ),
               ],
