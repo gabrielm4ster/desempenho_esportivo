@@ -12,57 +12,78 @@ import 'package:desempenho_esportivo/pages/home_page.dart';
 class Tecnica extends StatelessWidget {
   const Tecnica({super.key});
 
-  // static final List<Map<String, dynamic>> _teste = [
-  //   {
-  //     'titulo': 'sub 13',
-  //   },
-  //   {
-  //     'titulo': 'sub 15',
-  //   },
-  //   {
-  //     'titulo': 'sub 16',
-  //   },
-  //   {
-  //     'titulo': 'sub 17',
-  //   },
-  //   {
-  //     'titulo': 'sub 18',
-  //   },
-  // ];
+  static final List<Map<String, dynamic>> categoriaAvaliacao = [
+    {
+      'titulo': 'passes',
+    },
+    {
+      'titulo': 'finalização',
+    },
+    {
+      'titulo': 'contr.de bola',
+    },
+    {
+      'titulo': '',
+    },
+    {
+      'titulo': '',
+    },
+  ];
 
   static final List<Map<String, dynamic>> parteDeBaixo = [
     {
-      'quantidade': '2',
-      'descricao': 'Descrição Tipo 1',
-      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
-      'quantidade2': '2',
-      'descricao2': 'Descrição Tipo 1',
-      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
-      'quantidade3': '3',
-      'descricao3': 'Descrição Tipo 1',
-      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+      'titulo': 'Avaliação - Domínio e passe',
+      'valueBol': 2,
+      'descricaoBol': 'Chutes feitos',
+      'valueCheck': 2,
+      'descricaoCheck': 'Chutes corretos',
+      'valueError': 2,
+      'descricaoError': 'Chutes errados',
     },
     {
-      'quantidade': '2',
-      'descricao': 'Descrição Tipo 1',
-      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
-      'quantidade2': '2',
-      'descricao2': 'Descrição Tipo 1',
-      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
-      'quantidade3': '3',
-      'descricao3': 'Descrição Tipo 1',
-      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+      'titulo': 'Avaliação - Cruzamentos',
+      'valueBol': 2,
+      'descricaoBol': 'Cruzamentos ',
+      'valueCheck': 2,
+      'descricaoCheck': 'Cruz. certos',
+      'valueError': 2,
+      'descricaoError': 'Cruz. errados',
     },
     {
-      'quantidade': '2',
-      'descricao': 'Descrição Tipo 1',
-      'icone': const Icon(Icons.abc_rounded, color: Colors.blue),
-      'quantidade2': '2',
-      'descricao2': 'Descrição Tipo 1',
-      'icone2': const Icon(Icons.abc_outlined, color: Colors.blue),
-      'quantidade3': '3',
-      'descricao3': 'Descrição Tipo 1',
-      'icone3': const Icon(Icons.social_distance, color: Colors.blue),
+      'titulo': 'Avaliação - Passe na frente',
+      'valueBol': 2,
+      'descricaoBol': 'Passes na frente',
+      'valueCheck': 2,
+      'descricaoCheck': 'Passes certos',
+      'valueError': 2,
+      'descricaoError': 'Passes errados',
+    },
+    {
+      'titulo': 'Avaliação - Chutes dentro da área',
+      'valueBol': 2,
+      'descricaoBol': 'Chutes feitos',
+      'valueCheck': 2,
+      'descricaoCheck': 'Chutes certos',
+      'valueError': 2,
+      'descricaoError': 'Chutes errados',
+    },
+    {
+      'titulo': 'Avaliação - Chutes fora da área',
+      'valueBol': 2,
+      'descricaoBol': 'Chutes feitos',
+      'valueCheck': 2,
+      'descricaoCheck': 'Chutes certos',
+      'valueError': 2,
+      'descricaoError': 'Chutes errados',
+    },
+    {
+      'titulo': 'Avaliação - Pẽnalti',
+      'valueBol': 2,
+      'descricaoBol': 'Chutes feitos',
+      'valueCheck': 2,
+      'descricaoCheck': 'Chutes certos',
+      'valueError': 2,
+      'descricaoError': 'Chutes errados',
     },
   ];
 
@@ -89,71 +110,45 @@ class Tecnica extends StatelessWidget {
           ),
           SingleChildScrollView(
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const InfoUser(),
                 const SizedBox(
                   height: 10,
                 ),
-                const ChitDate(),
-                ListView.builder(
-                  itemCount: 2,
-                  shrinkWrap: true,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Avaliacao(
-                      quantidade: parteDeBaixo[index]['quantidade'],
-                      descricao: parteDeBaixo[index]['descricao'],
-                      icone: parteDeBaixo[index]['icone'],
-                      quantidade2: parteDeBaixo[index]['quantidade2'],
-                      descricao2: parteDeBaixo[index]['descricao2'],
-                      icone2: parteDeBaixo[index]['icone2'],
-                      quantidade3: parteDeBaixo[index]['quantidade3'],
-                      descricao3: parteDeBaixo[index]['descricao3'],
-                      icone3: parteDeBaixo[index]['icone3'],
-                    );
-                    // switch (index) {
-                    //   case 1:
-                    //     return widgetTipo1();
-                    //   case 2:
-                    //     return widgetTipo2();
-                    //   default:
-                    //     return const SizedBox.shrink();
-                    // }
-                  },
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                        categoriaAvaliacao.length,
+                        (int index) => Categoria(
+                            titulo: categoriaAvaliacao[index]['titulo']),
+                      ),
+                    ],
+                  ),
                 ),
+                const Divider(
+                  color: Colors.transparent,
+                ),
+                // ChitDate(data: DateTime.now()),
+                ...List.generate(
+                    parteDeBaixo.length,
+                    (int index) => Avaliacao(
+                          titulo: parteDeBaixo[index]['titulo'],
+                          valueBol: parteDeBaixo[index]['valueBol'],
+                          descricaoBol: parteDeBaixo[index]['descricaoBol'],
+                          valueCheck: parteDeBaixo[index]['valueCheck'],
+                          descricaoCheck: parteDeBaixo[index]['descricaoCheck'],
+                          valueError: parteDeBaixo[index]['valueError'],
+                          descricaoError: parteDeBaixo[index]['descricaoError'],
+                        )),
               ],
             ),
           ),
-          const AppBarButton(),
         ],
       ),
-    );
-  }
-
-  Widget widgetTipo1() {
-    return const Avaliacao(
-      quantidade: '2',
-      descricao: 'Descrição Tipo 1',
-      icone: Icon(Icons.abc_rounded, color: Colors.blue),
-      quantidade2: '2',
-      descricao2: 'Descrição Tipo 1',
-      icone2: Icon(Icons.abc_outlined, color: Colors.blue),
-      quantidade3: '3',
-      descricao3: 'Descrição Tipo 1',
-      icone3: Icon(Icons.social_distance, color: Colors.blue),
-    );
-  }
-
-  Widget widgetTipo2() {
-    return const Avaliacao(
-      quantidade: '2',
-      descricao: 'Descrição Tipo 1',
-      icone: Icon(Icons.star, color: Colors.blue),
-      quantidade2: '2',
-      descricao2: 'Descrição Tipo 1',
-      icone2: Icon(Icons.sports_soccer, color: Colors.blue),
-      quantidade3: '3',
-      descricao3: 'Descrição Tipo 1',
-      icone3: Icon(Icons.sports_soccer, color: Colors.blue),
+      bottomNavigationBar: const AppBarButton(),
     );
   }
 }
@@ -165,166 +160,136 @@ class AppBarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        height: 66,
-        decoration: const BoxDecoration(
-            gradient:
-                LinearGradient(colors: [MinhasCores.rosa, MinhasCores.azul])),
-        child: Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 38, right: 38, bottom: 5),
-            child: Row(
+    return Container(
+      height: 66,
+      decoration: const BoxDecoration(
+          gradient:
+              LinearGradient(colors: [MinhasCores.rosa, MinhasCores.azul])),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 27),
-                  child: SizedBox(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                            iconSize: 27,
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushReplacement(MaterialPageRoute(
-                                builder: (context) => const HomePage(),
-                              ));
-                            },
-                            icon: const Icon(
-                              Icons.home,
-                              color: Colors.white,
-                            )),
-                        const Text(
-                          'Home',
-                          style: TextStyle(fontSize: 9, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 27.0),
-                  child: SizedBox(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                            iconSize: 27,
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushReplacement(MaterialPageRoute(
-                                builder: (context) => const AvaliacoesPage(),
-                              ));
-                            },
-                            icon: const Icon(
-                              Icons.sports_soccer,
-                              color: Colors.white,
-                            )),
-                        const Text(
-                          'avaliacoes',
-                          style: TextStyle(fontSize: 9, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 27.0),
-                  child: SizedBox(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                            iconSize: 27,
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.assignment_ind_outlined,
-                              color: Colors.white,
-                            )),
-                        const Text(
-                          'passaporte.B',
-                          style: TextStyle(fontSize: 9, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                          iconSize: 27,
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.home,
-                            color: Colors.white,
-                          )),
-                      const Text(
-                        'gestão',
-                        style: TextStyle(fontSize: 9, color: Colors.white),
-                      ),
-                    ],
-                  ),
+                IconButton(
+                    iconSize: 27,
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const HomePage(),
+                      ));
+                    },
+                    icon: const Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    )),
+                const Text(
+                  'Home',
+                  style: TextStyle(fontSize: 9, color: Colors.white),
                 ),
               ],
             ),
-          ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                    iconSize: 27,
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const AvaliacoesPage(),
+                      ));
+                    },
+                    icon: const Icon(
+                      Icons.sports_soccer,
+                      color: Colors.white,
+                    )),
+                const Text(
+                  'avaliacoes',
+                  style: TextStyle(fontSize: 9, color: Colors.white),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                    iconSize: 27,
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.assignment_ind_outlined,
+                      color: Colors.white,
+                    )),
+                const Text(
+                  'passaporte.B',
+                  style: TextStyle(fontSize: 9, color: Colors.white),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                IconButton(
+                    iconSize: 27,
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    )),
+                const Text(
+                  'gestão',
+                  style: TextStyle(fontSize: 9, color: Colors.white),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
   }
 }
 
-class ChitDate extends StatelessWidget {
-  const ChitDate({
+// class ChitDate extends StatelessWidget {
+//   const ChitDate({
+//     super.key,
+//     required this.data,
+//   });
+//   final DateTime data;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 30,
+//       width: 150,
+//       decoration: const BoxDecoration(
+//         border: GradientBoxBorder(
+//           gradient: LinearGradient(
+//             colors: [Color(0xFF981DB9), Color(0xFF0F76CE)],
+//           ),
+//         ),
+//         shape: BoxShape.rectangle,
+//         borderRadius: BorderRadius.all(
+//           Radius.circular(23),
+//         ),
+//       ),
+//       child:
+//     );
+//   }
+// }
+
+class Categoria extends StatelessWidget {
+  const Categoria({
     super.key,
+    required this.titulo,
   });
+
+  final String titulo;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
-      width: 150,
-      decoration: const BoxDecoration(
-        border: GradientBoxBorder(
-          gradient: LinearGradient(
-            colors: [Color(0xFF981DB9), Color(0xFF0F76CE)],
-          ),
-        ),
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.all(
-          Radius.circular(23),
-        ),
-      ),
-      child: const Text(
-        textAlign: TextAlign.center,
-        'Aqui vou colocar a data',
-        style: TextStyle(
-          color: MinhasCores.branco,
-          fontFamily: 'outfit',
-          fontSize: 10,
-        ),
-      ),
-    );
-  }
-}
-
-class ChipFaixaCategoria extends StatelessWidget {
-  const ChipFaixaCategoria({
-    super.key,
-    required this.categoria,
-  });
-
-  final String categoria;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 6),
       width: 100,
-      height: 60,
+      height: 30,
       decoration: const BoxDecoration(
         border: GradientBoxBorder(
           gradient: LinearGradient(
@@ -339,7 +304,7 @@ class ChipFaixaCategoria extends StatelessWidget {
       child: TextButton(
         onPressed: () {},
         child: Text(
-          categoria,
+          titulo,
           style: const TextStyle(
             color: MinhasCores.branco,
             fontFamily: 'outfit',
