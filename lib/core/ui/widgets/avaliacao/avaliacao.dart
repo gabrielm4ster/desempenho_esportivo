@@ -63,13 +63,6 @@ class Avaliacao extends StatelessWidget {
                             fontFamily: 'outfit',
                             fontSize: 12),
                       ),
-                      Text(
-                        descricaoBol,
-                        style: const TextStyle(
-                            color: MinhasCores.branco,
-                            fontFamily: 'outfit',
-                            fontSize: 12),
-                      ),
                     ],
                   ),
                   Column(

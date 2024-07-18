@@ -1,4 +1,5 @@
 // ignore_for_file: unused_import
+import 'package:desempenho_esportivo/pages/tecnica_avalicao.dart';
 import 'package:flutter/material.dart';
 
 import 'package:desempenho_esportivo/pages/tecnica.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: Tecnica(),
+      home: TecnicaAvalicao(),
     );
   }
 }
