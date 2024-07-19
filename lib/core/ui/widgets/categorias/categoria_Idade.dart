@@ -1,16 +1,21 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
-import 'package:intl/intl.dart';
 
-class DataAtual extends StatelessWidget {
-  const DataAtual({super.key});
+class CategoriaIdade extends StatelessWidget {
+  const CategoriaIdade({
+    super.key,
+    required this.titulo,
+  });
+
+  final String titulo;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 6),
+      width: 100,
       height: 30,
-      width: 150,
       decoration: const BoxDecoration(
         border: GradientBoxBorder(
           gradient: LinearGradient(
@@ -22,19 +27,16 @@ class DataAtual extends StatelessWidget {
           Radius.circular(23),
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Dia ${DateFormat('dd/MM/yyyy').format(DateTime.now())}',
-            style: const TextStyle(
-                color: MinhasCores.branco, fontSize: 15, fontFamily: 'outfit'),
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          titulo,
+          style: const TextStyle(
+            color: MinhasCores.branco,
+            fontFamily: 'outfit',
+            fontSize: 10,
           ),
-          const Icon(
-            Icons.check,
-            color: Colors.green,
-          )
-        ],
+        ),
       ),
     );
   }

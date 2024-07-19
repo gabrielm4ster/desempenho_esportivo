@@ -132,7 +132,7 @@ class Tecnica extends StatelessWidget {
                 const Divider(
                   color: Colors.transparent,
                 ),
-                dataAtual(),
+                const DataAtual(),
                 ...List.generate(
                     parteDeBaixo.length,
                     (int index) => Avaliacao(
