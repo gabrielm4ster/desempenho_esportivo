@@ -1,17 +1,30 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/app_bar/app_bar_button.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/avaliacao/avaliacao_tecnica.dart';
+import 'package:desempenho_esportivo/core/ui/widgets/categorias/categoriaAvaliacao.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/info_user/info_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
+import 'package:graphic/graphic.dart';
 
 class TecnicaAvalicao extends StatelessWidget {
   const TecnicaAvalicao({super.key});
-  static final List<Map<String, dynamic>> avaliacao = [
+  static final List<Map<String, dynamic>> desempenho = [
     {
-      'titulo': 'passes feitos',
-      'quantidade': 0,
-    }
+      'titulo': 'foco',
+    },
+    {
+      'titulo': 'confiança',
+    },
+    {
+      'titulo': 'resiliẽncia',
+    },
+    {
+      'titulo': '',
+    },
+    {
+      'titulo': '',
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,15 +47,23 @@ class TecnicaAvalicao extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                InfoUser(),
-                AvaliacaoCategoria(
-                    icone: Icon(Icons.sports_soccer),
-                    titulo: 'passes feitos',
-                    quantidade: 0)
+                const InfoUser(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                        desempenho.length,
+                        (int index) => CategoriaAvaliacao(
+                            titulo: desempenho[index]['titulo']),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )

@@ -30,8 +30,7 @@ class PassaporteB extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GradientAppBar(
-        gradient: const LinearGradient(
-            colors: [Color(0xff440D53), Color(0xff07355D)]),
+        gradient: Meugradiente.gradiente,
         title: const Text(
           'Passaporte.B',
           style: TextStyle(fontFamily: 'StretchPro', fontSize: 20),

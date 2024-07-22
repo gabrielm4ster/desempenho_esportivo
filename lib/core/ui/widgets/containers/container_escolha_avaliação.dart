@@ -1,22 +1,24 @@
+import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
-class ContainersInfoAlunos extends StatelessWidget {
-  const ContainersInfoAlunos({
+class ContainerEscolhaAvaliacao extends StatelessWidget {
+  const ContainerEscolhaAvaliacao({
     super.key,
+    required this.titulo,
   });
+  final String titulo;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        margin: const EdgeInsets.all(40),
-        width: 300,
-        height: 200,
+        width: double.infinity,
+        height: 70,
         decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(
-            Radius.circular(13),
+            Radius.circular(10),
           ),
           border: GradientBoxBorder(
             gradient: LinearGradient(
@@ -25,6 +27,18 @@ class ContainersInfoAlunos extends StatelessWidget {
                 Color(0xFF0F76CE),
               ],
             ),
+          ),
+        ),
+        child: TextButton(
+          onPressed: () {},
+          child: Row(
+            children: [
+              const Icon(Icons.account_tree),
+              Text(
+                titulo,
+                style: const TextStyle(color: MinhasCores.branco, fontSize: 20),
+              )
+            ],
           ),
         ),
       ),

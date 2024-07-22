@@ -7,17 +7,17 @@ import 'package:desempenho_esportivo/core/ui/widgets/info_user/info_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 
-class Tatica extends StatelessWidget {
-  const Tatica({super.key});
+class Psicologica extends StatelessWidget {
+  const Psicologica({super.key});
   static final List<Map<String, dynamic>> categoria = [
     {
-      'titulo': 'Estratégia',
+      'titulo': 'foco',
     },
     {
-      'titulo': 'Análise',
+      'titulo': 'confiança',
     },
     {
-      'titulo': 'Comunicação',
+      'titulo': 'resiliẽncia',
     },
     {
       'titulo': '',
@@ -28,31 +28,31 @@ class Tatica extends StatelessWidget {
   ];
   static final List<Map<String, dynamic>> estrelas = [
     {
-      'titulo': 'avaliação - O atleta entende os objetivos táticos?',
+      'titulo': 'avaliação - o atleta está concentrado?',
     },
     {
-      'titulo': 'avaliacão - O atleta aplica a estratégia?',
+      'titulo': 'avaliacão - O atleta está reagindo rápido?',
     },
     {
-      'titulo': 'avaliacão - O atleta segue o plano de jogo?',
+      'titulo': 'avaliacão - Velocidade de reação é boa?',
     },
     {
-      'titulo': 'Avaliação - O atleta Identifica pontos fortes e fracos?',
+      'titulo': 'Avaliação - O atleta parece confiante?',
     },
     {
-      'titulo': 'Avaliação - O atleta é consistente no jogo?',
+      'titulo': 'Avaliação - Ele parece seguro de suas decisões?',
     },
     {
-      'titulo': 'Avaliacão - O atleta se adapta aos adversários',
+      'titulo': 'Avaliacão - Ele confia em sua equipe?',
     },
     {
-      'titulo': 'Avaliacão - O atleta se comunica bem?',
+      'titulo': 'Avaliacão - Ele trata seus colegas com respeito?',
     },
     {
-      'titulo': 'Avaliacão - O atleta revisa os relatórios pós-jogo',
+      'titulo': 'Avaliacão - Ele é respeitoso com os árbitros?',
     },
     {
-      'titulo': 'Avaliacão - O atleta recebe e aplica o feedback?',
+      'titulo': 'Avaliacão - Ele mostra respeito pelos treinadores?',
     },
   ];
   @override
@@ -62,7 +62,7 @@ class Tatica extends StatelessWidget {
         gradient:
             const LinearGradient(colors: [MinhasCores.rosa, MinhasCores.azul]),
         title: const Text(
-          'Tática',
+          'Psicólogica',
           style: TextStyle(fontFamily: 'StretchPro', fontSize: 20),
         ),
         centerTitle: true,

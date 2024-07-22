@@ -46,6 +46,7 @@ dependencies:
   flutter_gradient_app_bar: ^0.3.1
   graphic: ^2.3.0
   gradient_icon: ^2.0.9
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:
