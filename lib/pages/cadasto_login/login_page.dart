@@ -1,5 +1,5 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
-import 'package:desempenho_esportivo/pages/cadastro_page.dart';
+import 'package:desempenho_esportivo/pages/cadasto_login/cadastro_page.dart';
 import 'package:flutter/material.dart';
 import 'package:validatorless/validatorless.dart';
 

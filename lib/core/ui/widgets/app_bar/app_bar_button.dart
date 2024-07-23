@@ -1,6 +1,6 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:desempenho_esportivo/pages/avaliacoes_page.dart';
-import 'package:desempenho_esportivo/pages/gestao_de_carreira.dart';
+import 'package:desempenho_esportivo/pages/gestao/gestao_de_carreira.dart';
 import 'package:desempenho_esportivo/pages/home_page.dart';
 import 'package:desempenho_esportivo/pages/passaporte_b.dart';
 import 'package:flutter/material.dart';
