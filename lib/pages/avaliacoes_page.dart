@@ -9,15 +9,31 @@ class AvaliacoesPage extends StatelessWidget {
   static final List<Map<String, dynamic>> avaliacao = [
     {
       'titulo': 'Técnica',
+      'icone': const Icon(
+        Icons.sports_soccer,
+        color: MinhasCores.branco,
+      )
     },
     {
       'titulo': 'Psicológica',
+      'icone': const Icon(
+        Icons.trending_neutral_rounded,
+        color: MinhasCores.branco,
+      )
     },
     {
       'titulo': 'Física',
+      'icone': const Icon(
+        Icons.fitness_center,
+        color: MinhasCores.branco,
+      )
     },
     {
       'titulo': 'Tática',
+      'icone': const Icon(
+        Icons.run_circle,
+        color: MinhasCores.branco,
+      )
     },
   ];
   @override
@@ -42,25 +58,22 @@ class AvaliacoesPage extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            child: Column(
-              children: [
-                const Divider(
-                  color: Colors.transparent,
-                  height: 70,
-                ),
-                ...List.generate(
-                  avaliacao.length,
-                  (int index) => Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: ContainerEscolhaAvaliacao(
-                        titulo: avaliacao[index]['titulo']),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 150.0),
+              child: Column(
+                children: [
+                  ...List.generate(
+                    avaliacao.length,
+                    (int index) => Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: ContainerEscolhaAvaliacao(
+                        titulo: avaliacao[index]['titulo'],
+                        icone: avaliacao[index]['icone'],
+                      ),
+                    ),
                   ),
-                ),
-                const Divider(
-                  color: Colors.transparent,
-                  height: 150,
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],

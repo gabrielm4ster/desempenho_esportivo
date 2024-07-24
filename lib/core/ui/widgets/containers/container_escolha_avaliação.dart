@@ -6,15 +6,16 @@ class ContainerEscolhaAvaliacao extends StatelessWidget {
   const ContainerEscolhaAvaliacao({
     super.key,
     required this.titulo,
+    required this.icone,
   });
   final String titulo;
+  final Icon icone;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Container(
         width: double.infinity,
-        height: 70,
         decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(
@@ -32,12 +33,16 @@ class ContainerEscolhaAvaliacao extends StatelessWidget {
         child: TextButton(
           onPressed: () {},
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Icon(Icons.account_tree),
-              Text(
-                titulo,
-                style: const TextStyle(color: MinhasCores.branco, fontSize: 20),
-              )
+              icone,
+              Center(
+                child: Text(
+                  titulo,
+                  style:
+                      const TextStyle(color: MinhasCores.branco, fontSize: 20),
+                ),
+              ),
             ],
           ),
         ),

@@ -7,10 +7,26 @@ import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 class GestaoDeCarreira extends StatelessWidget {
   const GestaoDeCarreira({super.key});
   static final List<Map<String, dynamic>> gestao = [
-    {'titulo': 'Técnica', 'botao': 'melhores desempenhos'},
-    {'titulo': 'Psicológica', 'botao': 'ja foram jogados'},
-    {'titulo': 'Física', 'botao': 'propostas'},
-    {'titulo': 'Tática', 'botao': 'lesões ou fraturas'},
+    {
+      'titulo': 'Técnica',
+      'botao': 'melhores desempenhos',
+      'icone': const Image(image: AssetImage('assets/images/gestao.webp'))
+    },
+    {
+      'titulo': 'Psicológica',
+      'botao': 'ja foram jogados',
+      'icone': const Image(image: AssetImage('assets/images/competicoes.webp'))
+    },
+    {
+      'titulo': 'Física',
+      'botao': 'propostas',
+      'icone': const Image(image: AssetImage('assets/images/patrocinio.webp'))
+    },
+    {
+      'titulo': 'Tática',
+      'botao': 'lesões ou fraturas',
+      'icone': const Image(image: AssetImage('assets/images/saude.webp'))
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -46,7 +62,8 @@ class GestaoDeCarreira extends StatelessWidget {
                     padding: const EdgeInsets.all(15.0),
                     child: ContainerGestaoDeCarreira(
                       titulo: gestao[index]['titulo'],
-                      botao: 'melhores jogadas',
+                      botao: gestao[index]['botao'],
+                      icone: gestao[index]['icone'],
                     ),
                   ),
                 ),

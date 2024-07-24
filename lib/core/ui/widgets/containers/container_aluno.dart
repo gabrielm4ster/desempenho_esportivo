@@ -11,8 +11,7 @@ class ContainerAluno extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 341,
-        height: 62,
+        width: double.infinity,
         decoration: const BoxDecoration(
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.all(Radius.circular(13)),
@@ -21,10 +20,13 @@ class ContainerAluno extends StatelessWidget {
                     colors: [Color(0xFF981DB9), Color(0xFF0F76CE)]))),
         child: const Row(
           children: [
-            Icon(
-              Icons.account_circle_outlined,
-              color: MinhasCores.branco,
-              size: 35,
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Icon(
+                Icons.account_circle_outlined,
+                color: MinhasCores.branco,
+                size: 35,
+              ),
             )
           ],
         ),

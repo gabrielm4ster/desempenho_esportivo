@@ -2,13 +2,11 @@ import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:desempenho_esportivo/core/data/pie_data.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/app_bar/app_bar_button.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/categorias/categoriaAvaliacao.dart';
-import 'package:desempenho_esportivo/core/ui/widgets/containers/containers_info_alunos.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/data_atual/dataAtual.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/info_user/info_user.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class TecnicaGraficoPizza extends StatelessWidget {
   const TecnicaGraficoPizza({super.key});

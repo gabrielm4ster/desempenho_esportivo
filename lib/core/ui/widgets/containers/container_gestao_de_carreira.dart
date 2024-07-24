@@ -1,12 +1,15 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
-import 'package:gradient_icon/gradient_icon.dart';
 
 class ContainerGestaoDeCarreira extends StatelessWidget {
   const ContainerGestaoDeCarreira(
-      {super.key, required this.titulo, required this.botao});
+      {super.key,
+      required this.titulo,
+      required this.icone,
+      required this.botao});
   final String titulo;
+  final Image icone;
   final String botao;
   @override
   Widget build(BuildContext context) {
@@ -32,11 +35,7 @@ class ContainerGestaoDeCarreira extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const GradientIcon(
-              icon: Icons.healing,
-              gradient: Meugradiente.gradiente,
-              size: 70,
-            ),
+            icone,
             Column(
               children: [
                 Text(
@@ -47,8 +46,7 @@ class ContainerGestaoDeCarreira extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: Container(
-                    height: 30,
-                    width: 150,
+                    constraints: const BoxConstraints(minWidth: 170),
                     decoration: const BoxDecoration(
                       border: GradientBoxBorder(
                         gradient: LinearGradient(

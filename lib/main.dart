@@ -3,6 +3,7 @@ import 'package:desempenho_esportivo/core/ui/widgets/avaliacao/avaliacao.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/containers/faixa_etaria.dart';
 import 'package:desempenho_esportivo/pages/gestao/gestao_de_carreira.dart';
 import 'package:desempenho_esportivo/pages/tecnica/datas.dart';
+import 'package:desempenho_esportivo/pages/tecnica/tecnica_estrelas.dart';
 import 'package:desempenho_esportivo/pages/tecnica/tecnica_grafico_pizza.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: TecnicaGraficoPizza(),
+      home: HomePage(),
     );
   }
 }

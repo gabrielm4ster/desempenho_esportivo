@@ -1,4 +1,5 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
+import 'package:desempenho_esportivo/core/ui/widgets/elevated_buttom_image_prefix.dart';
 import 'package:flutter/material.dart';
 import 'package:validatorless/validatorless.dart';
 
@@ -21,15 +22,9 @@ class _CadastroPageState extends State<CadastroPage> {
 
   @override
   Widget build(BuildContext context) {
-    var iconVisibility = Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 8.0,
-        vertical: 2.0,
-      ),
-      child: Icon(
-        showPassword == false ? Icons.visibility_off : Icons.visibility,
-        color: const Color(0xFF666F7B),
-      ),
+    var iconVisibility = Icon(
+      showPassword == false ? Icons.visibility_off : Icons.visibility,
+      color: const Color(0xFF666F7B),
     );
 
     return Scaffold(
@@ -44,9 +39,9 @@ class _CadastroPageState extends State<CadastroPage> {
           ),
           Center(
             child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(40.0),
-                child: Form(
+              child: Form(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -62,33 +57,28 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                       const Align(
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 13.0),
-                          child: Text(
-                            'já tem uma conta?',
-                            style: TextStyle(
-                              color: MinhasCores.branco,
-                              fontFamily: 'outfit',
-                              fontSize: 16,
-                            ),
+                        child: Text(
+                          'já tem uma conta?',
+                          style: TextStyle(
+                            color: MinhasCores.branco,
+                            fontFamily: 'outfit',
+                            fontSize: 16,
                           ),
                         ),
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
-                            textStyle: const TextStyle(
-                          fontFamily: 'Outfit',
-                        )),
+                          textStyle: const TextStyle(
+                            fontFamily: 'Outfit',
+                          ),
+                        ),
                         onPressed: () {},
                         child: const Text(
                           'Entre',
                           style: TextStyle(color: MinhasCores.azul),
                         ),
                       ),
-
-                      //barra de cadastro 'nome'
                       const SizedBox(height: 16),
-
                       textInput(
                         icon: Icons.person_outline,
                         labelText: 'Nome completo',
@@ -98,140 +88,78 @@ class _CadastroPageState extends State<CadastroPage> {
                           'Nome é obrigatório.',
                         ),
                       ),
-
                       textInput(
                         icon: Icons.mail_outline,
                         labelText: 'E-mail',
                         hintText: 'Digite seu e-mail',
                         keyboardType: TextInputType.emailAddress,
                         onChanged: (value) {},
-                        validator: Validatorless.multiple([
-                          Validatorless.required('E-mail é obrigatório.'),
-                          Validatorless.email('Utilize um e-mail válido.')
-                        ]),
+                        validator: Validatorless.multiple(
+                          [
+                            Validatorless.required('E-mail é obrigatório.'),
+                            Validatorless.email('Utilize um e-mail válido.'),
+                          ],
+                        ),
                       ),
-
                       textInput(
                         icon: Icons.lock_outline,
                         label: const Text('Senha'),
                         obscureText: !showPassword,
                         suffix: TapRegion(
                           onTapInside: (_) {
-                            setState(() {
-                              showPassword = !showPassword;
-                            });
+                            setState(
+                              () {
+                                showPassword = !showPassword;
+                              },
+                            );
                           },
                           child: iconVisibility,
                         ),
                       ),
-
                       textInput(
                         icon: Icons.lock_outline,
                         label: const Text('Confirmar senha'),
                         obscureText: !showPassword,
                         suffix: TapRegion(
                           onTapInside: (_) {
-                            setState(() {
-                              showPassword = !showPassword;
-                            });
+                            setState(
+                              () {
+                                showPassword = !showPassword;
+                              },
+                            );
                           },
                           child: iconVisibility,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 13.0),
-                        child: SizedBox(
-                          height: 40,
-                          width: 316,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              backgroundColor: MinhasCores.rosa,
-                            ),
-                            onPressed: () {},
-                            child: const Text(
-                              'cadastre-se',
-                              style: TextStyle(
-                                  color: MinhasCores.branco,
-                                  fontFamily: 'Outfit'),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 19.0, bottom: 23.0),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/images/linha.webp',
-                                height: 2,
-                                width: 126.37,
-                              ),
-                              const Text(
-                                'Ou',
-                                style: TextStyle(
-                                    color: MinhasCores.branco,
-                                    fontFamily: 'Outfit'),
-                              ),
-                              Image.asset(
-                                'assets/images/linha.webp',
-                                height: 2,
-                                width: 126.37,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: MinhasCores.branco,
+                      OutlinedButton(
+                        style: const ButtonStyle(
+                          backgroundColor:
+                              WidgetStatePropertyAll(MinhasCores.rosa),
                         ),
                         onPressed: () {},
-                        child: const Row(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/google.webp'),
-                              height: 24,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 29.98),
-                              child: Text(
-                                'continuar pelo google',
-                                style: TextStyle(
-                                    color: MinhasCores.cinza,
-                                    fontFamily: 'Outfit'),
-                              ),
-                            ),
-                          ],
+                        child: const Text(
+                          'Cadastrar',
+                          style: TextStyle(color: MinhasCores.branco),
                         ),
                       ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: MinhasCores.branco,
+                      const Center(
+                        child: Text(
+                          'Ou',
+                          style: TextStyle(color: MinhasCores.branco),
                         ),
-                        onPressed: () {},
-                        child: const Row(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/facebook.webp'),
-                              height: 24,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 29.98),
-                              child: Text(
-                                'continuar pelo facebook',
-                                style: TextStyle(
-                                    color: MinhasCores.cinza,
-                                    fontFamily: 'Outfit'),
-                              ),
-                            ),
-                          ],
+                      ),
+                      const ElevatedButtomImagePrefix(
+                        titulo: 'Continuar com Google',
+                        imagem: Image(
+                          height: 30,
+                          image: AssetImage('assets/images/google.webp'),
+                        ),
+                      ),
+                      const ElevatedButtomImagePrefix(
+                        titulo: 'Continuar com facebook',
+                        imagem: Image(
+                          height: 30,
+                          image: AssetImage('assets/images/facebook.webp'),
                         ),
                       ),
                     ],

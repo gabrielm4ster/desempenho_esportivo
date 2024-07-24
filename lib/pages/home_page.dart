@@ -20,47 +20,45 @@ class HomePage extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'BEM VINDO!',
-                      style: TextStyle(
-                          fontFamily: 'StretchPro',
-                          color: MinhasCores.branco,
-                          fontSize: 20),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'BEM VINDO!',
+                          style: TextStyle(
+                              fontFamily: 'StretchPro',
+                              color: MinhasCores.branco,
+                              fontSize: 20),
+                        ),
+                        Text(
+                          DateFormat("EEEE,d 'de' MMMM.")
+                              .format(DateTime.now()),
+                          style: const TextStyle(
+                              color: MinhasCores.cinza_claro,
+                              fontSize: 15,
+                              fontFamily: 'StretchPro'),
+                        ),
+                      ],
                     ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.logout,
-                        size: 27,
+                  ),
+                  const TextfieldAluno(),
+                  const Text(
+                    'Alunos',
+                    style: TextStyle(
                         color: MinhasCores.branco,
-                      ),
-                    ),
-                  ],
-                ),
-                Text(
-                  DateFormat("EEEE,d'de' MMMM.").format(DateTime.now()),
-                  style: const TextStyle(
-                      color: MinhasCores.cinza_claro,
-                      fontSize: 20,
-                      fontFamily: 'outfit'),
-                ),
-                const TextfieldAluno(),
-                const Text(
-                  'Alunos',
-                  style: TextStyle(
-                      color: MinhasCores.branco,
-                      fontSize: 20,
-                      fontFamily: 'StretchPro'),
-                ),
-                const ContainerAluno(),
-              ],
+                        fontSize: 20,
+                        fontFamily: 'StretchPro'),
+                  ),
+                  const ContainerAluno(),
+                ],
+              ),
             ),
           ),
         ],
