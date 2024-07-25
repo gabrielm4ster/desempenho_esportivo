@@ -1,7 +1,10 @@
 // ignore_for_file: unused_import
 import 'package:desempenho_esportivo/core/ui/widgets/avaliacao/avaliacao.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/containers/faixa_etaria.dart';
+import 'package:desempenho_esportivo/pages/fisica/fisica_page.dart';
+import 'package:desempenho_esportivo/pages/fisica/fisica_page_timer.dart';
 import 'package:desempenho_esportivo/pages/gestao/gestao_de_carreira.dart';
+import 'package:desempenho_esportivo/pages/saude/saude.dart';
 import 'package:desempenho_esportivo/pages/tecnica/datas.dart';
 import 'package:desempenho_esportivo/pages/tecnica/tecnica_estrelas.dart';
 import 'package:desempenho_esportivo/pages/tecnica/tecnica_grafico_pizza.dart';
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: HomePage(),
+      home: Saude(),
     );
   }
 }
