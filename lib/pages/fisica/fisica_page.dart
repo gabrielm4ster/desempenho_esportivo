@@ -30,7 +30,7 @@ class FisicaPage extends StatelessWidget {
   static final List<Map<String, dynamic>> avaliacao = [
     {
       'titulo': 'avaliacao',
-      'porcentagem': '20%',
+      'porcentagem': '100%',
       'icone': const GradientIcon(
         icon: Icons.mood,
         gradient: Meugradiente.gradiente,
@@ -40,7 +40,7 @@ class FisicaPage extends StatelessWidget {
     },
     {
       'titulo': 'avaliacao',
-      'porcentagem': '20%',
+      'porcentagem': '68-84%',
       'icone': const GradientIcon(
         icon: Icons.mood,
         gradient: Meugradiente.gradiente,
@@ -50,7 +50,7 @@ class FisicaPage extends StatelessWidget {
     },
     {
       'titulo': 'avaliacao',
-      'porcentagem': '20%',
+      'porcentagem': '51-67%',
       'icone': const GradientIcon(
         icon: Icons.mood,
         gradient: Meugradiente.gradiente,
@@ -106,11 +106,15 @@ class FisicaPage extends StatelessWidget {
                         children: [
                           ...List.generate(
                             avaliacao.length,
-                            (int index) => ContainerFisica(
-                              titulo: avaliacao[index]['titulo'],
-                              porcentagem: avaliacao[index]['porcentagem'],
-                              icone: avaliacao[index]['icone'],
-                              teste: avaliacao[index]['teste'],
+                            (int index) => Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
+                              child: ContainerFisica(
+                                titulo: avaliacao[index]['titulo'],
+                                porcentagem: avaliacao[index]['porcentagem'],
+                                icone: avaliacao[index]['icone'],
+                                teste: avaliacao[index]['teste'],
+                              ),
                             ),
                           ),
                         ],

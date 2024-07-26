@@ -1,5 +1,6 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:flutter/material.dart';
+import 'package:gradient_icon/gradient_icon.dart';
 
 class RowEmojis extends StatelessWidget {
   const RowEmojis({
@@ -8,7 +9,7 @@ class RowEmojis extends StatelessWidget {
     required this.porcentagemrow,
   });
 
-  final Icon icone;
+  final GradientIcon icone;
   final String porcentagemrow;
   @override
   Widget build(BuildContext context) {
@@ -17,11 +18,14 @@ class RowEmojis extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text(
-              porcentagemrow,
-              style: const TextStyle(color: MinhasCores.branco, fontSize: 20),
-            ),
             icone,
+            Padding(
+              padding: const EdgeInsets.all(5),
+              child: Text(
+                porcentagemrow,
+                style: const TextStyle(color: MinhasCores.branco, fontSize: 15),
+              ),
+            ),
           ],
         ),
       ],

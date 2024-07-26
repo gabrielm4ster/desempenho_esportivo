@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class ContainerSaude extends StatelessWidget {
-  const ContainerSaude(
-      {super.key,
-      required this.status,
-      required this.icone,
-      required this.statusdesaude});
-  final String status;
+  const ContainerSaude({
+    super.key,
+    required this.titulo,
+    required this.icone,
+    required this.status,
+    required this.descricao,
+  });
+  final String titulo;
   final Icon icone;
-  final String statusdesaude;
+  final String status;
+  final String descricao;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -34,32 +38,40 @@ class ContainerSaude extends StatelessWidget {
         child: TextButton(
           onPressed: () {},
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 children: [
                   Text(
-                    status,
-                    style: TextStyle(color: MinhasCores.branco),
+                    titulo,
+                    style: const TextStyle(color: MinhasCores.branco),
                   ),
                   icone,
                   Text(
-                    statusdesaude,
-                    style: TextStyle(color: MinhasCores.branco),
+                    status,
+                    style: const TextStyle(color: MinhasCores.branco),
                   )
                 ],
               ),
-              Column(
-                children: [
-                  Text(
-                    'lesão',
-                    style: TextStyle(color: MinhasCores.branco, fontSize: 20),
-                  ),
-                  Text(
-                    'descrição',
-                    style: TextStyle(color: MinhasCores.branco),
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Lesão',
+                      style: TextStyle(
+                        fontFamily: 'StretchPro',
+                        color: MinhasCores.branco,
+                        fontSize: 30,
+                      ),
+                    ),
+                    Text(
+                      softWrap: true,
+                      descricao,
+                      style: const TextStyle(color: MinhasCores.branco),
+                    )
+                  ],
+                ),
               ),
             ],
           ),

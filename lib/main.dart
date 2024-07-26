@@ -5,6 +5,7 @@ import 'package:desempenho_esportivo/pages/fisica/fisica_page.dart';
 import 'package:desempenho_esportivo/pages/fisica/fisica_page_timer.dart';
 import 'package:desempenho_esportivo/pages/gestao/gestao_de_carreira.dart';
 import 'package:desempenho_esportivo/pages/saude/saude.dart';
+import 'package:desempenho_esportivo/pages/saude/saude_page_open.dart';
 import 'package:desempenho_esportivo/pages/tecnica/datas.dart';
 import 'package:desempenho_esportivo/pages/tecnica/tecnica_estrelas.dart';
 import 'package:desempenho_esportivo/pages/tecnica/tecnica_grafico_pizza.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: Saude(),
+      home: FisicaPageTimer(),
     );
   }
 }

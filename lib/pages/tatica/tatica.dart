@@ -110,8 +110,11 @@ class Tatica extends StatelessWidget {
                       children: [
                         ...List.generate(
                           estrelas.length,
-                          (int index) => ContainersEstrelas(
-                              titulo: estrelas[index]['titulo']),
+                          (int index) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: ContainersEstrelas(
+                                titulo: estrelas[index]['titulo']),
+                          ),
                         ),
                       ],
                     ),

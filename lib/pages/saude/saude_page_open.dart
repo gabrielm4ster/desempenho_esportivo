@@ -1,50 +1,19 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
 import 'package:desempenho_esportivo/core/ui/widgets/app_bar/app_bar_button.dart';
-import 'package:desempenho_esportivo/core/ui/widgets/containers/container_saude.dart';
+import 'package:desempenho_esportivo/core/ui/widgets/containers/container_saude_open.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradient_app_bar/flutter_gradient_app_bar.dart';
 
-class Saude extends StatelessWidget {
-  const Saude({super.key});
+class SaudePageOpen extends StatelessWidget {
+  const SaudePageOpen({super.key});
   static final List<Map<String, dynamic>> estadoSAude = [
     {
-      'titulo': 'status',
       'icone': const Icon(
         Icons.circle_outlined,
         color: Colors.green,
         size: 100,
       ),
-      'status': 'recuperando',
-      'descricao': '''
-      Entorse de tornozelo
-       Data 31/03/23 a
-       7/04/23 (7 dias)''',
-    },
-    {
-      'titulo': 'status',
-      'icone': const Icon(
-        Icons.circle_outlined,
-        color: Colors.green,
-        size: 100,
-      ),
-      'status': 'recuperando',
-      'descricao': '''
-      Entorse de tornozelo
-       Data 31/03/23 a
-       7/04/23 (7 dias)''',
-    },
-    {
-      'titulo': 'status',
-      'icone': const Icon(
-        Icons.circle_outlined,
-        color: Colors.green,
-        size: 100,
-      ),
-      'status': 'recuperando',
-      'descricao': '''
-      Entorse de tornozelo
-       Data 31/03/23 a
-       7/04/23 (7 dias)''',
+      'descricao': '''Entorse de tornozelo Data 31/03/23 a 7/04/23 (7 dias)''',
     },
   ];
   @override
@@ -70,11 +39,11 @@ class Saude extends StatelessWidget {
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 150.0),
+              padding: const EdgeInsets.symmetric(vertical: 50.0),
               child: Center(
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Lesões ou fraturas',
                       style: TextStyle(
                           color: MinhasCores.branco,
@@ -84,11 +53,9 @@ class Saude extends StatelessWidget {
                     ...List.generate(
                       estadoSAude.length,
                       (int index) => Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: ContainerSaude(
-                          titulo: estadoSAude[index]['titulo'],
+                        padding: const EdgeInsets.all(30.0),
+                        child: ContainerSaudeOpen(
                           icone: estadoSAude[index]['icone'],
-                          status: estadoSAude[index]['status'],
                           descricao: estadoSAude[index]['descricao'],
                         ),
                       ),
