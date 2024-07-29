@@ -1,10 +1,22 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
-import 'package:desempenho_esportivo/core/ui/widgets/elevated_buttom_image_prefix.dart';
 import 'package:flutter/material.dart';
 import 'package:validatorless/validatorless.dart';
 
 class CadastroPage extends StatefulWidget {
   const CadastroPage({super.key});
+  static final List<Map<String, dynamic>> textInputs = [
+    {
+      'icone': const Icon(Icons.person_outline),
+    }
+  ];
+  static final List<Map<String, dynamic>> elevatedButtom = [
+    {
+      'imagem': const Image(
+        image: AssetImage('assets/images/google.webp'),
+      ),
+      'titulo': 'continuar com o google',
+    }
+  ];
 
   @override
   State<CadastroPage> createState() => _CadastroPageState();
@@ -78,7 +90,15 @@ class _CadastroPageState extends State<CadastroPage> {
                           style: TextStyle(color: MinhasCores.azul),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      // ...List.generate(
+                      //   textInputs.length,
+                      //   (int index) => Padding(
+                      //     padding: const EdgeInsets.all(8.0),
+                      //     child: textInput(
+                      //       icone: textInputs[index]['icone'],
+                      //     ),
+                      //   ),
+                      // ),
                       textInput(
                         icon: Icons.person_outline,
                         labelText: 'Nome completo',
@@ -131,7 +151,7 @@ class _CadastroPageState extends State<CadastroPage> {
                           child: iconVisibility,
                         ),
                       ),
-                      OutlinedButton(
+                      TextButton(
                         style: const ButtonStyle(
                           backgroundColor:
                               WidgetStatePropertyAll(MinhasCores.rosa),
@@ -148,20 +168,30 @@ class _CadastroPageState extends State<CadastroPage> {
                           style: TextStyle(color: MinhasCores.branco),
                         ),
                       ),
-                      const ElevatedButtomImagePrefix(
-                        titulo: 'Continuar com Google',
-                        imagem: Image(
-                          height: 30,
-                          image: AssetImage('assets/images/google.webp'),
-                        ),
-                      ),
-                      const ElevatedButtomImagePrefix(
-                        titulo: 'Continuar com facebook',
-                        imagem: Image(
-                          height: 30,
-                          image: AssetImage('assets/images/facebook.webp'),
-                        ),
-                      ),
+                      // ...List.generate(
+                      //   elevatedButtom.length,
+                      //   (int index) => Padding(
+                      //     padding: const EdgeInsets.all(8.0),
+                      //     child: ElevatedButtomImagePrefix(
+                      //       image: elevatedButtom[index]['imagem'],
+                      //       titulo: elevatedButtom[index]['titulo']
+                      //     ),
+                      //   ),
+                      // ),
+                      // const ElevatedButtomImagePrefix(
+                      //   titulo: 'Continuar com Google',
+                      //   imagem: Image(
+                      //     height: 30,
+                      //     image: AssetImage('assets/images/google.webp'),
+                      //   ),
+                      // ),
+                      // const ElevatedButtomImagePrefix(
+                      //   titulo: 'Continuar com facebook',
+                      //   imagem: Image(
+                      //     height: 30,
+                      //     image: AssetImage('assets/images/facebook.webp'),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
@@ -198,7 +228,7 @@ Widget textInput({
       initialValue: initialValue,
       onChanged: onChanged,
       style: const TextStyle(
-        color: Color(0xFF666F7B),
+        color: MinhasCores.cinza_claro,
         fontSize: 16,
       ),
       keyboardType: keyboardType,

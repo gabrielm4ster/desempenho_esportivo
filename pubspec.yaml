@@ -48,6 +48,15 @@ dependencies:
   gradient_icon: ^2.0.9
   fl_chart: ^0.68.0
   stop_watch_timer: ^3.1.1
+  json_annotation: ^4.9.0
+  internet_connection_checker: ^1.0.0+1
+  dio: ^5.5.0+1
+  shared_preferences: ^2.2.3
+  http_mock_adapter: ^0.6.1
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  riverpod_lint: ^2.3.10
+  riverpod_generator: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -59,7 +68,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
-
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.11
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

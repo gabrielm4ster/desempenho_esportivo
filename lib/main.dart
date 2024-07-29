@@ -13,12 +13,12 @@ import 'package:flutter/material.dart';
 
 import 'package:desempenho_esportivo/pages/tecnica/tecnica.dart';
 import 'package:desempenho_esportivo/pages/avaliacoes_page.dart';
-import 'package:desempenho_esportivo/pages/cadasto_login/cadastro_page.dart';
+import 'package:desempenho_esportivo/pages/cadasto/cadastro_page.dart';
 import 'package:desempenho_esportivo/pages/escolha_de_escola.dart';
 import 'package:desempenho_esportivo/pages/escolha_de_esporte.dart';
 import 'package:desempenho_esportivo/pages/faixa_etaria/faixa_etaria_page.dart';
 import 'package:desempenho_esportivo/pages/home_page.dart';
-import 'package:desempenho_esportivo/pages/cadasto_login/login_page.dart';
+import 'package:desempenho_esportivo/pages/login/login_page.dart';
 import 'package:desempenho_esportivo/pages/passaporte_b.dart';
 import 'package:desempenho_esportivo/pages/psicologica.dart';
 import 'package:desempenho_esportivo/pages/tatica/tatica.dart';
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'app teste',
-      home: FisicaPageTimer(),
+      home: LoginPage(),
     );
   }
 }

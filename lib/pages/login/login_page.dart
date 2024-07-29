@@ -1,10 +1,20 @@
 import 'package:desempenho_esportivo/_comum/minhas_cores.dart';
-import 'package:desempenho_esportivo/pages/cadasto_login/cadastro_page.dart';
+import 'package:desempenho_esportivo/pages/cadasto/cadastro_page.dart';
 import 'package:flutter/material.dart';
 import 'package:validatorless/validatorless.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+  static final List<Map<String, dynamic>> emojirow = [
+    {
+      'titulo': 'continuar pelo google',
+      'imagem': Image.asset('assets/images/continuar_google.webp')
+    },
+    {
+      'titulo': 'continuar pelo facebook',
+      'imagem': Image.asset('assets/images/continuar_facebook.webp')
+    }
+  ];
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -108,9 +118,11 @@ class _LoginPageState extends State<LoginPage> {
                           obscureText: !showPassword,
                           suffix: TapRegion(
                             onTapInside: (_) {
-                              setState(() {
-                                showPassword = !showPassword;
-                              });
+                              setState(
+                                () {
+                                  showPassword = !showPassword;
+                                },
+                              );
                             },
                             child: iconVisibility,
                           ),
@@ -142,90 +154,19 @@ class _LoginPageState extends State<LoginPage> {
                         alignment: Alignment.centerLeft,
                         child: TextButton(
                           style: TextButton.styleFrom(
-                              textStyle: const TextStyle(
-                            fontFamily: 'Outfit',
-                          )),
+                            textStyle: const TextStyle(
+                              fontFamily: 'Outfit',
+                            ),
+                          ),
                           onPressed: () {},
                           child: const Text(
-                            'esqueceu a senha?',
+                            'Esqueceu a senha?',
                             style: TextStyle(color: MinhasCores.branco),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 19.0, bottom: 23.0),
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                'assets/images/linha.webp',
-                                height: 2,
-                                width: 116.37,
-                              ),
-                              const Text(
-                                'Ou',
-                                style: TextStyle(
-                                    color: MinhasCores.branco,
-                                    fontFamily: 'Outfit'),
-                              ),
-                              Image.asset(
-                                'assets/images/linha.webp',
-                                height: 2,
-                                width: 116.37,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: MinhasCores.branco,
-                        ),
-                        onPressed: () {},
-                        child: const Row(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/google.webp'),
-                              height: 24,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 29.98),
-                              child: Text(
-                                'continuar pelo google',
-                                style: TextStyle(
-                                    color: MinhasCores.cinza,
-                                    fontFamily: 'Outfit'),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: MinhasCores.branco,
-                        ),
-                        onPressed: () {},
-                        child: const Row(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/facebook.webp'),
-                              height: 24,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 29.98),
-                              child: Text(
-                                'continuar pelo facebook',
-                                style: TextStyle(
-                                    color: MinhasCores.cinza,
-                                    fontFamily: 'Outfit'),
-                              ),
-                            ),
-                          ],
-                        ),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 19.0, bottom: 23.0),
                       ),
                     ],
                   ),
