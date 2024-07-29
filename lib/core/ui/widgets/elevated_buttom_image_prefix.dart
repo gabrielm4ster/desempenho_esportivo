@@ -15,7 +15,12 @@ class ElevatedButtomImagePrefix extends StatelessWidget {
       ),
       onPressed: () {},
       child: Row(
-        children: [imagem, Center(child: Text(titulo))],
+        children: [
+          imagem,
+          Center(
+            child: Text(titulo),
+          ),
+        ],
       ),
     );
   }
